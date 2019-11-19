@@ -1,0 +1,11 @@
+@import "../../custom-properties.css";
+
+/** @define HeadingTwo; */
+
+.HeadingTwo {
+  font: 300 var(--type-4) / 2rem Nova, sans-serif;
+
+  &:not(:first-child) {
+    margin-top: 2rem;
+  }
+}

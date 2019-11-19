@@ -1,0 +1,23 @@
+@import "../../custom-properties.css";
+
+/** @AttentionGrabbingLink; */
+
+.AttentionGrabbingLink {
+  color: var(--white);
+  display: inline-block;
+  font: 600 var(--type-2) / 1.5rem Nova, sans-serif;
+  height: 3rem;
+  margin-right: 1rem;
+  padding: 0.75rem 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+.AttentionGrabbingLink--black {
+  background-color: var(--black);
+
+  &:active,
+  &:hover {
+    background-color: color-mod(var(--black) shade(10%));
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../custom-properties.css";
+
+/** @define Steps; */
+
+.Steps {
+  color: color-mod(var(--black) tint(30%));
+  font: 300 var(--type-0) / 1.5rem system-ui;
+  margin: 1rem 0;
+  max-width: 46rem;
+}

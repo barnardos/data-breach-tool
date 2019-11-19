@@ -1,0 +1,34 @@
+@import "../../custom-properties.css";
+
+.DescriptionList {
+  padding: 1rem 0;
+}
+
+.DescriptionList .DescriptionList-term {
+  font-weight: 700;
+}
+
+.DescriptionList .DescriptionList-description {
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 44rem) {
+  .DescriptionList {
+    padding: 1rem;
+  }
+  /* stylelint-disable property-whitelist */
+  .DescriptionList .DescriptionList-term {
+    clear: left;
+    float: left;
+    overflow: hidden;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 11rem;
+  }
+  /* stylelint-enable */
+
+  .DescriptionList .DescriptionList-description {
+    margin-left: 12rem;
+  }
+}

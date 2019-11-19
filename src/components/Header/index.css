@@ -1,0 +1,14 @@
+@import "../../custom-properties.css";
+
+/** @define Header; */
+
+.Header {
+  box-shadow: inset 0 -1px 0 0 var(--nfgmc-orange);
+  padding: 0.5rem 1rem;
+}
+
+.Header-logoInner {
+  display: block;
+  height: 5rem;
+  width: 18.75rem;
+}

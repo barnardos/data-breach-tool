@@ -1,0 +1,19 @@
+@import "../../custom-properties.css";
+
+/** @define Paragraph; */
+
+/* stylelint-disable */
+a {
+  word-break: break-all;
+}
+
+/* stylelint-enable */
+
+.Paragraph {
+  font: 300 var(--type-0) / 1.5rem system-ui;
+  max-width: 46rem;
+
+  &:not(:first-child) {
+    margin: 1rem 0;
+  }
+}

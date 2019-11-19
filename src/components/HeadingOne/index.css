@@ -1,0 +1,8 @@
+@import "../../custom-properties.css";
+
+/** @define HeadingOne; */
+
+.HeadingOne {
+  font: 600 var(--type-5) / 2rem Nova, sans-serif;
+  margin-bottom: 1rem;
+}

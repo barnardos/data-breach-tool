@@ -1,0 +1,49 @@
+{
+  "name": "fgm-risk-assessment-tool",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@react-pdf/renderer": "^1.0.0-alpha.25",
+    "@react-pdf/styled-components": "^1.2.0",
+    "core-js": "^2.5.7",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "markdown-to-jsx": "^6.8.4",
+    "react": "^16.4.1",
+    "react-app-polyfill": "^0.1.3",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-ga": "^1.0.0",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom",
+    "eject": "react-scripts eject",
+    "check-format": "prettier '**/*.{css,json,js,md}' '!package.json' --list-different --ignore-path .gitignore",
+    "format": "prettier '**/*.{css,json,js,md}' '!package.json' --write --ignore-path .gitignore",
+    "lint:css": "stylelint '**/*.css' --max-warnings=0 --ignore-path .gitignore",
+    "lint:js": "eslint . --ignore-path .gitignore",
+    "lint": "npm-run-all --parallel lint:*",
+    "pretest": "npm-run-all --parallel lint check-format"
+  },
+  "devDependencies": {
+    "@barnardos/stylelint-config-barnardos": "^0.2.1",
+    "enzyme": "^3.3.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.9.1",
+    "jest-localstorage-mock": "^2.2.0",
+    "npm-run-all": "^4.1.3",
+    "postcss-import": "^12.0.0",
+    "postcss-preset-env": "^5.3.0",
+    "prettier": "^1.13.5",
+    "react-app-rewire-postcss": "^1.0.2",
+    "react-app-rewired": "^1.5.2",
+    "stylelint": "^9.3.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-order": "^0.8.1",
+    "stylelint-selector-bem-pattern": "^2.0.0"
+  }
+}

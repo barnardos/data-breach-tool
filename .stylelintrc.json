@@ -1,0 +1,6 @@
+{
+  "extends": "@barnardos/stylelint-config-barnardos",
+  "rules": {
+    "plugin/font-size-whitelist": null
+  }
+}

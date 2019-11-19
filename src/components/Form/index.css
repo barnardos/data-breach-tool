@@ -1,0 +1,16 @@
+@import "../../custom-properties.css";
+
+/** @define Form; */
+
+.Form {
+  display: block;
+  margin-top: 1rem;
+  max-width: 46rem;
+}
+
+/* stylelint-disable */
+.Form > div,
+.Form > fieldset {
+  margin-bottom: 2rem;
+}
+/* stylelint-enable */

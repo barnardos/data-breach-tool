@@ -1,0 +1,861 @@
+{
+  "resultsPage": {
+    "title": "Assessment results",
+    "paragraph":
+      "Here are the results based on the answers you have provided. Please use your professional judgement",
+    "sections": [
+      {
+        "id": "mandatory-reporting-duty",
+        "heading": "Mandatory reporting duty",
+        "outputs": [
+          {
+            "id": 1,
+            "output":
+              "You have visually seen signs of FGM and the girl has disclosed to a professional that she had had FGM. You have personal duty to report to the police on 101 and follow your normal safeguarding procedures.",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr4",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "equals",
+                "questionId": "cdnsr6",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "output":
+              "The regulated professional, who FGM was disclosed to should call 101 (police) to make a report as part of their Mandatory Reporting Duty (Serious Crime Act, 2015) and follow their normal safeguarding procedures.",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr4",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "doesNotEqual",
+                "questionId": "cdnsr6",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 3,
+            "output":
+              "You have identified the girl is showing physical signs that FGM may have taken place. You must inform the police on 101 as part of your <a href=\"https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/525405/FGM_mandatory_reporting_map_A.pdf\" target=\"_blank\">Mandatory Reporting Duty</a> (Serious Crime Act, 2015), which does not require there to be a full clinical diagnosis confirming FGM before a report is made. You should also follow your normal safeguarding procedures.",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr6",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "doesNotEqual",
+                "questionId": "cdnsr4",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 4,
+            "output":
+              "Based on the information you have entered, you do not currently have a Mandatory Duty to report to the police (Serious Crime Act, 2015).",
+            "outputType": "text",
+            "level": "info",
+            "conditions": [
+              {
+                "type": "didNotAnswer",
+                "questionId": "cdnsr6",
+                "required": true
+              },
+              {
+                "type": "didNotAnswer",
+                "questionId": "cdnsr4",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "sibling-assessment",
+        "heading": "Sibling assessment",
+        "outputs": [
+          {
+            "id": 10,
+            "output":
+              "There may be a significant risk of FGM to siblings. Refer to MASH/Child Protection Team for intervention, Section 47 enquiry and strategy meeting to be held. Consider risk to younger siblings and health/psychological needs of girl who has been subjected to FGM and refer to FGM Good Practice Guidance for Social Workers. For FGM services in your region visit <a href=\"http://www.nationalfgmcentre.org.uk/fgm/uk-fgm-services\" target=\"_blank\">www.nationalfgmcentre.org.uk/fgm/uk-fgm-services</a>",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr4",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "risk-assessment",
+        "heading": "Risk assessment",
+        "outputs": [
+          {
+            "id": 30,
+            "outputType": "text",
+            "level": "danger",
+            "output":
+              "There may be a significant risk of FGM – Explore the need for further assessment, strategy discussion, child protection conference and if reasonable, progress to Section 47 enquiry. Where applicable, draft up a child protection plan which the core group (including family members) should develop and implement. <br /><br />Discuss what needs to happen to keep the girl safe and how to support the family. Identify any services <a href=\"http://www.nationalfgmcentre.org.uk/fgm/uk-fgm-services\" target=\"_blank\">www.nationalfgmcentre.org.uk/fgm/uk-fgm-services</a> that are required by the child and family to support them. <br /><br />It may be appropriate to involve the local authority’s solicitor if legal measures are being considered including applying for an FGM Protection Order <a href=\"https://www.gov.uk/female-genital-mutilation-protection-order\" target=\"_blank\">www.gov.uk/female-genital-mutilation-protection-order</a>.",
+            "conditions": [
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["significant-risk-factor"],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": false
+              },
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["potential-risk-factor"],
+                "questionValue": "yes",
+                "greaterThan": 2,
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": 31,
+            "outputType": "text",
+            "level": "warning",
+            "output":
+              "There may be a medium risk of FGM – Discuss what needs to happen to keep the girl safe and how to support the family and review safety/protective factors below to assist your next steps and analysis of this risk. <br /><br />If there are further concerns, explore carrying out an assessment of the child’s need under Section 17 of Children Act 1989. If risk increases, consider progressing to a Section 47 (Child Protection) enquiry.",
+            "conditions": [
+              {
+                "type": "answersTaggedWithEquals",
+                "questionsTaggedWith": ["potential-risk-factor"],
+                "questionValue": "yes",
+                "equals": 2,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithLessThan",
+                "questionsTaggedWith": ["significant-risk-factor"],
+                "questionValue": "yes",
+                "lessThan": 1,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 32,
+            "outputType": "text",
+            "level": "positive",
+            "output":
+              "There may be a low risk of FGM – If you feel the family: understand the consequences of FGM, know FGM is considered child abuse in the UK, understand that they have a parental responsibility to protect their daughter from FGM and they are able and willing to protect their daughter (including active safety planning), you can look at closing the case. <br /><br />However, if you do have further concerns, there will be a need for further assessment of the child’s needs.",
+            "conditions": [
+              {
+                "type": "answersTaggedWithEquals",
+                "questionsTaggedWith": ["potential-risk-factor"],
+                "questionValue": "yes",
+                "equals": 1,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithLessThan",
+                "questionsTaggedWith": ["significant-risk-factor"],
+                "questionValue": "yes",
+                "lessThan": 1,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 33,
+            "outputType": "text",
+            "level": "warning",
+            "output": "Please view other considerations below.",
+            "conditions": [
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["complicating-factor"],
+                "questionValue": "yes",
+                "greaterThan": 1,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithLessThan",
+                "questionsTaggedWith": ["potential-risk-factor"],
+                "questionValue": "yes",
+                "lessThan": 1,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithLessThan",
+                "questionsTaggedWith": ["significant-risk-factor"],
+                "questionValue": "yes",
+                "lessThan": 1,
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "safety-factors",
+        "heading": "Safety factors",
+        "outputs": [
+          {
+            "id": 40,
+            "outputType": "text",
+            "level": "danger",
+            "output":
+              "Due to the selection of significant risk factors and/or the absence of key safety/protective factors you should work with the family to reduce risk by building safety/protective factors that are missing and look at how risks can be reduced.",
+            "conditions": [
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["protective-safety-factor"],
+                "questionValue": "no",
+                "greaterThan": 0,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["significant-risk-factor"],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["potential-risk-factor"],
+                "questionValue": "yes",
+                "greaterThan": 1,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 41,
+            "outputType": "text",
+            "level": "positive",
+            "output":
+              "The family are showing a variety of protective factors across the risk assessment. Please consider how this reduces the risk of FGM and consider reducing the level of intervention where appropriate.",
+            "conditions": [
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": [
+                  "childs-developmental-needs",
+                  "protective-safety-factor"
+                ],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": [
+                  "parenting-capacity",
+                  "protective-safety-factor"
+                ],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": [
+                  "wider-family-and-environmental-factors",
+                  "protective-safety-factor"
+                ],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 42,
+            "outputType": "text",
+            "level": "danger",
+            "output":
+              "The family are showing no protective factors. Please consider how this may increase the risk of FGM and what work needs to be done help protect the girl. For resources on working with families go to <a href=\"http://www.nationalfgmcentre.org.uk/knowledge-hub-resources\" target=\"_blank\">www.nationalfgmcentre.org.uk/knowledge-hub-resources</a>",
+            "conditions": [
+              {
+                "type": "answersTaggedWithEquals",
+                "questionsTaggedWith": ["protective-safety-factor"],
+                "questionValue": "yes",
+                "equals": 0,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 43,
+            "outputType": "text",
+            "level": "danger",
+            "output":
+              "The family are not showing enough safety factors to reduce the risk of FGM. Please consider how to improve the protection/safety factors in each section. For resources on working with families go to <a href=\"http://www.nationalfgmcentre.org.uk/knowledge-hub-resources\" target=\"_blank\">www.nationalfgmcentre.org.uk/knowledge-hub-resources</a>",
+            "conditions": [
+              {
+                "type": "answersTaggedWithEquals",
+                "questionsTaggedWith": ["protective-safety-factor"],
+                "questionValue": "yes",
+                "equals": 1,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 44,
+            "outputType": "text",
+            "level": "warning",
+            "output":
+              "Even though some safety factors have been identified, there has been none identified in Child Developmental Needs. Please consider how to develop safety in this area to reduce the risk of FGM. For resources on working with families go to <a href=\"http://www.nationalfgmcentre.org.uk/knowledge-hub-resources\" target=\"_blank\">www.nationalfgmcentre.org.uk/knowledge-hub-resources</a>",
+            "conditions": [
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["protective-safety-factor"],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithEquals",
+                "questionsTaggedWith": [
+                  "childs-developmental-needs",
+                  "protective-safety-factor"
+                ],
+                "questionValue": "yes",
+                "equals": 0,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 45,
+            "outputType": "text",
+            "level": "warning",
+            "output":
+              "Even though some safety factors have been identified, there has been none identified in Wider Family and Environmental Factors. Please consider how to develop safety in this area in order to reduce the risk of FGM. For resources on working with families go to <a href=\"http://www.nationalfgmcentre.org.uk/knowledge-hub-resources\" target=\"_blank\">www.nationalfgmcentre.org.uk/knowledge-hub-resources</a>",
+            "conditions": [
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["protective-safety-factor"],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithEquals",
+                "questionsTaggedWith": [
+                  "wider-family-and-environmental-factors",
+                  "protective-safety-factor"
+                ],
+                "questionValue": "yes",
+                "equals": 0,
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 46,
+            "outputType": "text",
+            "level": "warning",
+            "output":
+              "Even though some safety factors have been identified, there has been not been enough identified in Parenting Capacity. Please consider how to develop safety in this area in order to reduce the risk of FGM. For resources on working with families go to <a href=\"http://www.nationalfgmcentre.org.uk/knowledge-hub-resources\" target=\"_blank\">www.nationalfgmcentre.org.uk/knowledge-hub-resources</a>",
+            "conditions": [
+              {
+                "type": "answersTaggedWithGreaterThan",
+                "questionsTaggedWith": ["protective-safety-factor"],
+                "questionValue": "yes",
+                "greaterThan": 0,
+                "required": true
+              },
+              {
+                "type": "answersTaggedWithEquals",
+                "questionsTaggedWith": [
+                  "parenting-capacity",
+                  "protective-safety-factor"
+                ],
+                "questionValue": "yes",
+                "equals": 0,
+                "required": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "forced-marriage",
+        "heading": "Forced marriage",
+        "outputs": [
+          {
+            "id": 5,
+            "output":
+              "There may be a possibility of forced marriage, please refer to Multi-agency practice guidelines: Handling cases of Forced Marriage.",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnpr2",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 6,
+            "output":
+              "Please explore if there is a history of forced marriage in the family. Please refer to multi-agency practice guidelines: Handling cases of Force Marriage.",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnpr2",
+                "questionValue": "dontKnow",
+                "required": false
+              },
+              {
+                "type": "didNotAnswer",
+                "questionId": "cdnpr2",
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": 8,
+            "output": "Not applicable in this case",
+            "outputType": "text",
+            "level": "info",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnpr2",
+                "questionValue": "no",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "cdnpr2",
+                "questionValue": "na",
+                "required": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "further-considerations",
+        "heading": "Further considerations",
+        "outputs": [
+          {
+            "id": 20,
+            "output":
+              "As a girl has disclosed FGM has taken place please consider the needs (health and emotional) of the girl and any risk that may come due to her disclosure. Consider any other girls in the family who may be at risk or have already been subjected to FGM. A medical examination may be required. For a list of FGM clinics in the UK go to <a href=\"http://www.nationalfgmcentre.org.uk/where-to-get-help\" target=\"_blank\">www.nationalfgmcentre.org.uk/where-to-get-help</a>",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr4",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 21,
+            "output":
+              "As an older sibling and/or cousins have undergone FGM, the subject of this assessment may be at increased risk. Where a medical examination may be required a consultant paediatrician from the providing service should be involved. For a list of FGM clinics in the UK go to <a href=\"http://www.nationalfgmcentre.org.uk/where-to-get-help\" target=\"_blank\">www.nationalfgmcentre.org.uk/where-to-get-help</a>",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr1",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 22,
+            "output":
+              "As the girl is showing physical signs that FGM has taken place please consider a medical examination to assess the girl health needs. Consider any other girls in the family who may have been subjected to/are at risk of FGM. For a list of FGM clinics in the UK go to <a href=\"http://www.nationalfgmcentre.org.uk/where-to-get-help\" target=\"_blank\">www.nationalfgmcentre.org.uk/where-to-get-help</a>",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr6",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 23,
+            "output":
+              "Please explore who is the protective person in the girl life, how you can support them to protect the girl from FGM and if the adult feels able to continue to protect the girl. The protective person may wish to consider using an FGM Protection Order to support them. For resources on working with families go to <a href=\"http://www.nationalfgmcentre.org.uk/knowledge-hub-resources\" target=\"_blank\">www.nationalfgmcentre.org.uk/knowledge-hub-resources</a>",
+            "outputType": "text",
+            "level": "warning",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "pccf3",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "equals",
+                "questionId": "pcpf6",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 24,
+            "output":
+              "As the parents have conflicting views you may find one parent is a risk to the girl whilst the other is a protector. Please consider each parent individually to assist your assessment and consider protective/safety factors.",
+            "outputType": "text",
+            "level": "warning",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "viewsDiffer",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 25,
+            "output":
+              "Consider the actions the parent/s have taken to protect their daughter from FGM. These action may have helped reduce the risk and the social worker should explore how to the support the family further to protect the girl.",
+            "outputType": "text",
+            "level": "warning",
+            "conditions": [
+              {
+                "type": "doesNotEqual",
+                "questionId": "pccf3",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "equals",
+                "questionId": "pcpf6",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 26,
+            "output":
+              "Contact the relevant professional to identify what conversation has been had with parent/s around FGM concerns. Consider the risk of a parent removing the child without permission and consider the use of an FGMPO to prevent the girl being taken abroad.",
+            "outputType": "text",
+            "level": "warning",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "pccf3",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "equals",
+                "questionId": "cdnsr10",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 27,
+            "output":
+              "Please gather more information on any conversation that has been had with parent/s around FGM. If other risk factors have been identified, consider the use of an FGMPO to prevent the girl being taken abroad.",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdnsr10",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 28,
+            "output":
+              "Reinfibulation is illegal in the UK. Please inform relevant family members of the law and explore why they are requesting reinfibulation.  Inform mum of services that may be available to support her, including counselling.",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "pcsr2",
+                "questionValue": "yes",
+                "required": true
+              }
+            ]
+          },
+          {
+            "id": 28,
+            "output":
+              "It is vital that both parents/guardians understand the risks that extended family and/or community members may pose to the girl. Please explore who (if anyone) is a risk and how both parents/guardians will work to protect the girl if they come into contact with a high risk person. If both parents/guardians cannot identify risks this places the girl at high risk. Please work with both parents/guardians to identify high risk people and develop safety strategies to protect the girl. You may find it useful to use a genogram, please refer to guidance (Appendix 7).",
+            "outputType": "text",
+            "level": "danger",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "widerpf3",
+                "questionValue": "no",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widerpf3",
+                "questionValue": "dontKnow",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widerpf3-father",
+                "questionValue": "no",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widerpf3-father",
+                "questionValue": "dontKnow",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widerpf3-mother",
+                "questionValue": "no",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widerpf3-mother",
+                "questionValue": "dontKnow",
+                "required": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "immigration",
+        "heading": "Immigration",
+        "outputs": [
+          {
+            "id": 11,
+            "output":
+              "The family/girl immigration status may be a complicating factor. Please seek immigration advice from refugee council via <a href=\"https://www.refugeecouncil.org.uk\" target=\"_blank\">www.refugeecouncil.org.uk</a>",
+            "outputType": "text",
+            "level": "warning",
+            "conditions": [
+              {
+                "type": "equals",
+                "questionId": "cdncf2",
+                "questionValue": "yes",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widersr1",
+                "questionValue": "yes",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widercf1",
+                "questionValue": "yes",
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": 14,
+            "output":
+              "Please explore the families immigration status in the UK.",
+            "outputType": "text",
+            "level": "info",
+            "conditions": [
+              {
+                "type": "doesNotEqual",
+                "questionId": "cdncf2",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "doesNotEqual",
+                "questionId": "widersr1",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "doesNotEqual",
+                "questionId": "widercf1",
+                "questionValue": "yes",
+                "required": true
+              },
+              {
+                "type": "equals",
+                "questionId": "widersr1",
+                "questionValue": "dontKnow",
+                "required": false
+              },
+              {
+                "type": "didNotAnswer",
+                "questionId": "widersr1",
+                "required": false
+              },
+              {
+                "type": "equals",
+                "questionId": "widercf1",
+                "questionValue": "dontKnow",
+                "required": false
+              },
+              {
+                "type": "didNotAnswer",
+                "questionId": "widercf1",
+                "required": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "totals-table",
+        "heading": "Totals",
+        "type": "table",
+        "outputs": [
+          {
+            "id": 100,
+            "outputType": "tableFromTagTotals",
+            "columns": [
+              "",
+              "Significant risk factors",
+              "Potential risk factors",
+              "Complicating factors",
+              "Protective/Safety factors"
+            ],
+            "conditions": [{ "required": false }],
+            "data": [
+              {
+                "rowName": "Childs developmental needs",
+                "rowParentTag": "childs-developmental-needs",
+                "rowTags": [
+                  "significant-risk-factor",
+                  "potential-risk-factor",
+                  "complicating-factor",
+                  "protective-safety-factor"
+                ]
+              },
+              {
+                "rowName": "Parenting Capacity",
+                "rowParentTag": "parenting-capacity",
+                "rowTags": [
+                  "significant-risk-factor",
+                  "potential-risk-factor",
+                  "complicating-factor",
+                  "protective-safety-factor"
+                ]
+              },
+              {
+                "rowName": "Wider family and environmental factors",
+                "rowParentTag": "wider-family-and-environmental-factors",
+                "rowTags": [
+                  "significant-risk-factor",
+                  "potential-risk-factor",
+                  "complicating-factor",
+                  "protective-safety-factor"
+                ]
+              },
+              {
+                "rowName": "Total",
+                "rowParentTag": "total",
+                "rowTags": [
+                  "significant-risk-factor",
+                  "potential-risk-factor",
+                  "complicating-factor",
+                  "protective-safety-factor"
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "country-information",
+        "heading": "Country information",
+        "type": "descriptionList",
+        "outputs": [
+          {
+            "id": 200,
+            "outputType": "descriptionList",
+            "conditions": [
+              {
+                "required": false
+              }
+            ],
+            "data": [
+              {
+                "rowName": "Country name",
+                "rowValue": "name"
+              },
+              {
+                "rowName": "Prevalance",
+                "rowValue": "prevalance"
+              },
+              {
+                "rowName": "Average FGM age",
+                "rowValue": "avgfgmage"
+              },
+              {
+                "rowName": "Ethnic groups",
+                "rowValue": "ethnicgroups"
+              },
+              {
+                "rowName": "Law",
+                "rowValue": "law"
+              },
+              {
+                "rowName": "Other",
+                "rowValue": "other"
+              },
+              {
+                "rowName": "Types",
+                "rowValue": "typespracticed"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

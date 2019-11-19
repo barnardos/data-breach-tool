@@ -1,0 +1,33 @@
+@import "../../custom-properties.css";
+
+/** @define Submit; */
+
+.Submit {
+  appearance: none;
+  background-color: var(--nfgmc-red);
+  border: none;
+  border-radius: 0;
+  box-shadow: 0.25rem 0.25rem color-mod(var(--nfgmc-red) shade(40%));
+  color: var(--white);
+  font: 600 var(--type-2) / 1.5rem Nova, sans-serif;
+  padding: 0.75rem 3rem;
+  text-align: center;
+  white-space: normal;
+  width: 100%;
+
+  &:hover {
+    background-color: color-mod(var(--nfgmc-red) shade(10%));
+  }
+
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 0.25rem;
+  }
+}
+
+@media (min-width: 32rem) {
+  .Submit {
+    width: auto;
+  }
+}

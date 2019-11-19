@@ -1,0 +1,20 @@
+{
+  "startPage": {
+    "title": "FGM Assessment Tool",
+    "paragraphOne":
+      "Use this tool to help assess cases where there is a concern around FGM.",
+    "unorderedListItem": {
+      "title": "The tool will help you identify:",
+      "items": [
+        "what risks are present",
+        "what safety factors are present or need to be developed",
+        "other information to help you decide what steps to take"
+      ]
+    },
+    "paragraphTwo": "It usually takes about 15 minutes to complete.",
+    "paragraphThree":
+      "**This is to be used by social work practitioners only and does not replace professional judgement.**",
+    "paragraphFour":
+      "For further information read the <a href=\"http://nationalfgmcentre.org.uk/wp-content/uploads/2018/03/FGM-Assessment-Tool-FAQs.pdf\" target=\"_blank\">Frequently Asked Questions</a>."
+  }
+}

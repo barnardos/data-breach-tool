@@ -1,0 +1,832 @@
+{
+  "countries": [
+    {
+      "id": "country-unknown",
+      "label": "Unknown or unlisted",
+      "value": "unknown"
+    },
+    {
+      "id": "56afe873-7f71-5743-203d-09e63ab964d1",
+      "name": "Angola",
+      "prevalance": "Unknown",
+      "avgfgmage": "Unknown",
+      "typespracticed": "Unknown",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "Kwanhama or Kwanyama ethnic group.",
+      "other": "The Kwanhama is in the South of Angola.",
+      "label": "Angola",
+      "value": "angola"
+    },
+    {
+      "id": "dd3dc33e-38cb-15ec-0277-251b50df46a8",
+      "name": "Benin",
+      "prevalance": "12.90%",
+      "avgfgmage": "70% cut under 9 years",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups": "Peulh, Bariba, Locpa and Yoa",
+      "other":
+        "More prominent in the North and Middle of Benin. Practiced across religions. French is the official language with Fon and Yoruba spoken in the South.",
+      "label": "Benin",
+      "value": "benin"
+    },
+    {
+      "id": "c87ebe1e-6e50-24a4-c791-06e21748a3ee",
+      "name": "Burkina Faso",
+      "prevalance": "76%",
+      "avgfgmage": "91% cut before 10 years",
+      "typespracticed": "II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practicing ethnic groups include: Dioula, Senufo, Gourounsi, Bobo and Bissau",
+      "other":
+        "Practice is widespread throughout the country. Higher rates are found in Cascades, Hauts-Bassins, Nord, Centre-Nord, Centre-East and Plateau-Central. Practiced in all religions. French is the official language.",
+      "label": "Burkina Faso",
+      "value": "burkina faso"
+    },
+    {
+      "id": "7c743649-06fb-0562-8006-fcf5d5f8ff69",
+      "name": "Burundi",
+      "prevalance": "Unknown",
+      "avgfgmage": "Often before puberty",
+      "typespracticed": "IV",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "",
+      "other":
+        "There is evidence that Labia Elongation may be practiced in Burundi. There are very few studies on the practice of FGM in Burundi.",
+      "label": "Burundi",
+      "value": "burundi"
+    },
+    {
+      "id": "4a73135c-db87-dc9c-dd9c-aef97007c998",
+      "name": "Cameroon",
+      "prevalance": "1.40%",
+      "avgfgmage": "50% between 5-9yrs",
+      "typespracticed": "I and II",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Practising ethnic groups include: Sara, Arab and Mayo-Kebbi",
+      "other":
+        "Practice is higher among the Muslim community, however, it is also practiced by other religious communities.",
+      "label": "Cameroon",
+      "value": "cameroon"
+    },
+    {
+      "id": "065a6f28-8312-1fbc-3893-8eb36b27e1bd",
+      "name": "Central African Republic",
+      "prevalance": "24%",
+      "avgfgmage": "50% cut between 9-12yrs",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Republic Practising ethnic groups include: Sara, Arab and Mayo-Kebbi",
+      "other":
+        "Practice is higher in Ouham Pende, Baming Ui Bangoran, Vakaga, Haute Kotto, Basse Kotto, Ouka and Kemo Gribingui. Practiced among all religions. French is the official language.",
+      "label": "Central African Republic",
+      "value": "central african republic"
+    },
+    {
+      "id": "c037f34e-1d28-512e-4d02-abda11721504",
+      "name": "Chad",
+      "prevalance": "44%",
+      "avgfgmage": "59% cut between 5-9, 26% cut between 10-14yrs",
+      "typespracticed": "I, II and IV",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practicing ethnic groups include: Arabs, Hadjarai, Ouadai and Fitri-batha. Rarely practiced amoung: Gorane, Tandjile and Mayo-Kebbi",
+      "other":
+        "More widespread in the East and South of the country. More common among Muslim communities, however it is also practiced among other religious communities as well. French and literary Arabic are the official languages.",
+      "label": "Chad",
+      "value": "chad"
+    },
+    {
+      "id": "a91b07b8-103f-8221-7ae6-8205ce3d93c2",
+      "name": "Colombia",
+      "prevalance": "Among the Embrea-Chami tribe",
+      "avgfgmage": "Usually as a newborn",
+      "typespracticed": "I and VI",
+      "law": "Legal",
+      "ethnicgroups": "About 50,000 people in Colombia identify as Embrea",
+      "other":
+        "The Embrea-Chami tribe are based in Western Colombia and in the Risaralda province. The death of a baby in 2007, due to complication of FGM prompted a movement to stop FGM.",
+      "label": "Colombia",
+      "value": "colombia"
+    },
+    {
+      "id": "56a90df0-ab22-1dfc-e226-f2bd74939cf7",
+      "name": "Côte d’Ivoire",
+      "prevalance": "38%",
+      "avgfgmage": "Usually cut between 4-7yrs",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups include: Yokuba, Gere, We, Guru, Djula and Malenke",
+      "other":
+        "Practiced throughout the country with higher prevalence in the Northern districts of Denguele, Savanes, Worodougou and Bafing. Practiced among all religions. Official language is French.",
+      "label": "Côte d’Ivoire",
+      "value": "côte d’ivoire"
+    },
+    {
+      "id": "2742988f-d0c4-138c-9cf7-0670d3bd8622",
+      "name": "Djibouti",
+      "prevalance": "93%",
+      "avgfgmage": "62% cut between 5-9yrs",
+      "typespracticed": "III and IV",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Limited data on the practice among specific ethnic groups",
+      "other":
+        "Practiced in all regions. Majority Muslim country and many believe FGM is a religious obligation. French and Arabic are the official languages.",
+      "label": "Djibouti",
+      "value": "djibouti"
+    },
+    {
+      "id": "3f1c8fef-527a-42fb-5826-f066f5399641",
+      "name": "Ecuador",
+      "prevalance": "Among the Embrea-Chami tribe",
+      "avgfgmage": "Usually as a newborn",
+      "typespracticed": "VI",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "",
+      "other":
+        "Practiced among the Embrea-Chami tribe who usually reside in Western Colombia, however, there has been migration into Ecuador.",
+      "label": "Ecuador",
+      "value": "ecuador"
+    },
+    {
+      "id": "9d7cd50b-ac73-76c3-2c77-9124e94b8aba",
+      "name": "Egypt",
+      "prevalance": "87%",
+      "avgfgmage": "5-14 Years (Most common between 5-10 years old)",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups": "",
+      "other":
+        "Practiced across the country by all religions. The death of a girl, due to FGM, in 2007 prompted a large movement to end FGM. However, due to the Arab Springs movement initiatives have been halted. The official language is Arabic.",
+      "label": "Egypt",
+      "value": "egypt"
+    },
+    {
+      "id": "81d1331b-a877-f011-ccab-e3186b7b02bd",
+      "name": "Eritrea",
+      "prevalance": "89%",
+      "avgfgmage": "59% cut <1yrs, 15% cut >5yrs",
+      "typespracticed": "I, II and III",
+      "law": "Illegal",
+      "ethnicgroups": "",
+      "other":
+        "FGM is practiced throughout Eritrea despite efforts to stop it since 1988. Many believe that a girl who is uncut will experience fertility problems in the future. The official languages are Tigrinya, Arabic, and English.",
+      "label": "Eritrea",
+      "value": "eritrea"
+    },
+    {
+      "id": "44e08f89-78fb-4c8f-5aee-5b50a16e4306",
+      "name": "Ethiopia",
+      "prevalance": "74%",
+      "avgfgmage": "52% <1yrs",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic group include:Amhara, Tigrayan, Gurage, Oromo, Shalink, Afar, Somali and Harari",
+      "other":
+        "Practiced throughout the country with higher rates in the Eastern regions of Somali and Afar. Practiced among all religions. Arabic, Amharic, English and Oromigna are the official languages.",
+      "label": "Ethiopia",
+      "value": "ethiopia"
+    },
+    {
+      "id": "8097d0ee-e460-2cc6-f060-84eb21494b97",
+      "name": "Georgia",
+      "prevalance": "Unknown",
+      "avgfgmage": "Childhood",
+      "typespracticed": "I (The top of the clitoris)",
+      "law": "Illegal",
+      "ethnicgroups": "Avar community (Predominantly Muslim)",
+      "other":
+        "Eastern Georgia (Tivi, Saruso and Chantliskure in the Kvareli district)",
+      "label": "Georgia",
+      "value": "georgia"
+    },
+    {
+      "id": "f0455908-abe7-2eb1-394a-1cb3589feb22",
+      "name": "Ghana",
+      "prevalance": "4%",
+      "avgfgmage": "80% cut <5yrs",
+      "typespracticed": "I, II and III",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups include: Kussasi, Frafra, Kassena, Nankanne, Bussauri, Moshie, Manprusie, Kantasi, Walas, Grunshie, Dargati and Lobi",
+      "other":
+        "Practice is higher in the Upper West and Upper East regions of Ghana. The practice is decreasing in Ghana due to government support of eradication and education. The official language is English.",
+      "label": "Ghana",
+      "value": "ghana"
+    },
+    {
+      "id": "123febd2-2b78-ba95-acde-50d317c21ab2",
+      "name": "Guinea",
+      "prevalance": "96%",
+      "avgfgmage": "60% 5-9yrs",
+      "typespracticed": "All types",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups include: Fula/Peul, Malinke, Soussou, Guerze, Toma and Nalou",
+      "other":
+        "Practice is seen throughout the country and equally among both Muslims, Christians and other religions. There is evidence to suggest FGM is on the rise in Guinea both in terms of the practice and support for it. The official language is French.",
+      "label": "Guinea",
+      "value": "guinea"
+    },
+    {
+      "id": "844fc3cf-4ad0-3f5b-1407-6913f033d96e",
+      "name": "Guinea Bissau",
+      "prevalance": "50%",
+      "avgfgmage": "62% cut <9yrs, 38% cut >10yrs",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practised among ethinc groups including: Fula/Peul and Mandinka",
+      "other":
+        "Practice is across the country with higher rates in Eastern regions of Gabu and Bafata. It is mostly practiced among the Muslim community. Portuguese is the official language and Crioulo is widely spoken.",
+      "label": "Guinea Bissau",
+      "value": "guinea bissau"
+    },
+    {
+      "id": "c0b048dd-89f0-2768-d101-f05ed8652fc0",
+      "name": "India",
+      "prevalance": "Dawoodi Bohra Ethnic Group",
+      "avgfgmage": "Usually around 7 years old",
+      "typespracticed": "I",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Practiced by Dawoodi Bohra ethnic group only. Approx 1 million in India.",
+      "other":
+        "Usually, the Dawoodi Bohra community is based in West India. FGM is referred to as 'Khatna' as the clitoris is seen as bad. Practiced predominantly among Muslim women. Hindu, Bengali and Telugu are the main languages spoken in India.",
+      "label": "India",
+      "value": "india"
+    },
+    {
+      "id": "3e8de56c-d1c3-a6c0-2f1b-6d49d86d3505",
+      "name": "Indonesia",
+      "prevalance": "49% of <11 yr olds",
+      "avgfgmage": "Usually cut in first year of life",
+      "typespracticed": "I and IV",
+      "law": "Legal (if done by medical professional in non-invasive way)",
+      "ethnicgroups":
+        "Usually performed by the Muslim Community in medical establishments.",
+      "other":
+        "Hotspots include Western Sumatra, East, Central and West Jave, North Sumatra, Acheh, South Sulawesi and Madura Island. FGM is referred to as Sunat Perempuan. Most commonly done due to the belief it is a religious obligation.",
+      "label": "Indonesia",
+      "value": "indonesia"
+    },
+    {
+      "id": "359c37a9-281d-4445-c2a5-7b53f18c31d8",
+      "name": "Iran",
+      "prevalance": "Among Kurdish community",
+      "avgfgmage": "From 40 days onward.",
+      "typespracticed": "I, II and VI",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Sunni Muslim communities have higher rates of FGM but is also practiced among Shi''a Muslim community as well.",
+      "other":
+        "FGM is practiced in mostly the South and West of Iran including Kurdistan, Hormozgan, Western Azerbaijan, Kermanshah and Lorestan. Mainly practiced by the  Sunni and Kurdish communities.",
+      "label": "Iran",
+      "value": "iran"
+    },
+    {
+      "id": "832faf34-1344-2a2a-f970-f5336de71599",
+      "name": "Iraq",
+      "prevalance": "8% (Overall), 25% (In Central/Southern Iraq)",
+      "avgfgmage": "Usually cut between 15-30yrs",
+      "typespracticed": "I, II and III",
+      "law": "Illegal in Iraqi Kurdistan region",
+      "ethnicgroups":
+        "Practising ethnic groups include: Erbil, Sulaymaniyah and Kirkuk",
+      "other":
+        "Only small-scale studies have been carried out. Predominantly FGM is focused in the Southern region of Qadisiya and Central region of Salahaddin.",
+      "label": "Iraq",
+      "value": "iraq"
+    },
+    {
+      "id": "5af0688e-845a-801d-811d-3f765ca0a401",
+      "name": "Jordon",
+      "prevalance": "Unknown",
+      "avgfgmage": "Cut between 8-12 yrs",
+      "typespracticed": "I",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "",
+      "other":
+        "Evidence suggests FGM is practiced in Rahmah, Araba (South). Often done due to a belief it is a religious obligation. Arabic is the official language.",
+      "label": "Jordon",
+      "value": "jordon"
+    },
+    {
+      "id": "c7344319-4f8b-ff1e-8d00-b87466e8a13b",
+      "name": "Kenya",
+      "prevalance": "27%",
+      "avgfgmage": "Cut between 12 and 18yrs",
+      "typespracticed": "I, II and III",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups include: Embu, Kalenjin, Kamba, Kikuyu, Kisii, Luhya (<1%), Luo (<1%), Maasai, Meru, Mikikenda/Swahili (<5%), Somali, Taita/Taveta, Turkana and Kuria",
+      "other":
+        "FGM is practiced across the country and is almost universal in the North Eastern Region. The Western region has < 1% FGM rate. Evidence suggests FGM is being performed on girls earlier now, to avoid detection.",
+      "label": "Kenya",
+      "value": "kenya"
+    },
+    {
+      "id": "160d6c48-b520-ed5e-eec5-e721d1d60f9c",
+      "name": "Kuwait",
+      "prevalance": "38%",
+      "avgfgmage": "Cut between 4-12yrs",
+      "typespracticed": "II and III",
+      "law": "Legal",
+      "ethnicgroups": "Practiced among the Sunni Muslim community.",
+      "other": "A study of 4800 pregnant women found that 38% had been cut.",
+      "label": "Kuwait",
+      "value": "kuwait"
+    },
+    {
+      "id": "c619ed12-066d-b4c1-2f94-75140ac31af0",
+      "name": "Liberia",
+      "prevalance": "58%",
+      "avgfgmage": "Unknown",
+      "typespracticed": "II",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Over 50% of Liberian women are part of the Sande Society.",
+      "other":
+        "Practice among the Sande Community as part of Initiation. The society promotes morality and proper sexual conduct, teaching women how to behave in society. It is a very closed society to non-members.",
+      "label": "Liberia",
+      "value": "liberia"
+    },
+    {
+      "id": "d0f58784-722b-cd72-fa76-73ca3cfbdc5d",
+      "name": "Libya",
+      "prevalance": "Please see other details",
+      "avgfgmage": "Unknown",
+      "typespracticed": "Unknown",
+      "law": "Unknown",
+      "ethnicgroups": "",
+      "other":
+        "Very little is known about the prevalence of FGM in Libya. Evidence suggest it being promoted as an Islamic religious obligation by religious leaders so it may be increasing.",
+      "label": "Libya",
+      "value": "libya"
+    },
+    {
+      "id": "6d4b7efe-0145-5046-dce7-dc527a884919",
+      "name": "Malawi",
+      "prevalance": "Please see other details",
+      "avgfgmage": "Usually between 10-15yrs old",
+      "typespracticed": "Unknown",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "",
+      "other":
+        "Research carried out by the MHRC revealed FGM is practiced in some parts of the Southern region including Thyolo and Mulanji. The procedure involves pinching and removing the top of the clitoris during a ceremony and is performed by the Namkungwi (elder).",
+      "label": "Malawi",
+      "value": "malawi"
+    },
+    {
+      "id": "49e4d6bd-5846-4480-79f3-60af324be7c9",
+      "name": "Malaysia",
+      "prevalance": ">90% Muslim women only",
+      "avgfgmage": "Usually cut before 1yr",
+      "typespracticed": "I and IV",
+      "law": "Legal (if done by medical professional in non-invasive way)",
+      "ethnicgroups": "",
+      "other":
+        "FGM is usually performed 40 days after the birth. Evidence suggest it is practiced by the Mulsim Community only and is usually done under a belief it is a religious obligation. Malay is the official language.",
+      "label": "Malaysia",
+      "value": "malaysia"
+    },
+    {
+      "id": "23712ad1-1315-5584-7f26-05073c8abbed",
+      "name": "Mali",
+      "prevalance": "91%",
+      "avgfgmage": "73% cut <5yrs",
+      "typespracticed": "I, II ad III",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Practising ethic groups include: Mande (Bambara, Malinke, Soninke), Peul, Votanic, Songhai, Tuareg and Moor.",
+      "other":
+        "FGM is practiced across the country with the highest rates in Western and Central regions. Prevalence is <2% in Kidal and Gao (East) regions. The official language is French.",
+      "label": "Mali",
+      "value": "mali"
+    },
+    {
+      "id": "c7ab0f89-d6f3-6885-7622-51dbba0e2d8f",
+      "name": "Mauritania",
+      "prevalance": "69%",
+      "avgfgmage": "Usually cut between 0-4yrs",
+      "typespracticed": "I and II",
+      "law": "Illegal to conduct or witness",
+      "ethnicgroups":
+        "Most prevalent amoung: Sonike, Poular and Arab ethnic groups",
+      "other":
+        "FGM is practiced throughout the country with higher rates in the Southern regions of Hodh Ech Chargui, Tagant, Bakna, Gorgol, Guidimaka, Assaba and Hodh Ech Gharbi., The official language is Arabic.",
+      "label": "Mauritania",
+      "value": "mauritania"
+    },
+    {
+      "id": "4573da40-b9b0-81bf-8e08-6983fdad5cc1",
+      "name": "Mozambique",
+      "prevalance": "Unknown",
+      "avgfgmage": "Pulling usually starts between 6-8yrs old",
+      "typespracticed": "VI",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Mozambique has thousands of refugees from countries where FGM is prevalent.",
+      "other":
+        "There have been very few studies on FGM prevalence in Mozambique. Elongation of the labia and small incisions are known types of FGM carried out in Mozambique. Elongation can be carried out by the girl herself and another family member throughout her life.",
+      "label": "Mozambique",
+      "value": "mozambique"
+    },
+    {
+      "id": "79660f1f-7a68-8056-2d42-c07f37392716",
+      "name": "Niger",
+      "prevalance": "2%",
+      "avgfgmage": "84% cut before 6yrs old",
+      "typespracticed": "I, II and IV",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups include: Arabes (part of Shona tribe), Govrmanche, Kourtey, Peulh, Sunghai and Waya",
+      "other":
+        "Practice is higher in Tillabery, Niamey and Diffa and the borders FGM practicing countries. Dangouria (South East) is practiced in Niger which is the removal of the Hymen 10 days after birth and at 9-15yrs an incision is made to widen the vagina.",
+      "label": "Niger",
+      "value": "niger"
+    },
+    {
+      "id": "8b3288f4-5bdf-3496-4fa4-b992d11777f1",
+      "name": "Nigeria",
+      "prevalance": "27%",
+      "avgfgmage": "82% cut before 4yrs old",
+      "typespracticed": "All types",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups: Yoruba, Hausa, Fulani, Igbo, Ijaw and Kanuri",
+      "other":
+        "Prevalence is higher in the South West, South East, and South-South regions. Type III is more common in the North and Type I and II are more prominent in the South. 'Gishiri' (cutting the vagina or urethra) is practiced by the Fulani.",
+      "label": "Nigeria",
+      "value": "nigeria"
+    },
+    {
+      "id": "5f108f49-93dc-46ea-7164-3f7d508c8a66",
+      "name": "Oman",
+      "prevalance": "53%-78%",
+      "avgfgmage": "25% before 1yr olds. 50% before 5yrs.",
+      "typespracticed": "I, II and IV",
+      "law": "Prohibited in private and government hospital",
+      "ethnicgroups":
+        "Studies included interviews with women from all regions suggesting it may be practiced among multiple ethnic groups.",
+      "other":
+        "Small scales studies have been conducted in Oman which suggests there are higher rates in Dhofar, Sharqiya North, and South, Dikhiliya and Bafina. Efforts are in place to help eradicate FGM. Arabic is the official language.",
+      "label": "Oman",
+      "value": "oman"
+    },
+    {
+      "id": "7a0ea385-15d2-f541-f454-5343108815ac",
+      "name": "Pakistan",
+      "prevalance": "Unknown",
+      "avgfgmage": "Usually in early infancy",
+      "typespracticed": "I",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "Practised among the Dawodi Bohra ethnic group",
+      "other":
+        "Practiced among the Dawoodi Bohra who makes up about 100,000 people in Pakistan. It is estimated 50-70% of the Dawoodi Bohra practice FGC, known as Khatna. The main languages are Punjabi, Sindhi, and Saraiki.",
+      "label": "Pakistan",
+      "value": "pakistan"
+    },
+    {
+      "id": "4a58ce4d-1c05-81da-bbc9-361e161dfbbe",
+      "name": "Panama",
+      "prevalance": "Please see other details",
+      "avgfgmage": "Usually a newborn",
+      "typespracticed": "VI",
+      "law": "Unknown",
+      "ethnicgroups": "",
+      "other":
+        "Please see Colombia for information on practice within the Embrea Conibos tribe who also reside in parts of Panama.",
+      "label": "Panama",
+      "value": "panama"
+    },
+    {
+      "id": "4e2f494c-6d42-c7bd-36b5-88b12ac45116",
+      "name": "Peru",
+      "prevalance": "Unknown",
+      "avgfgmage": "When a girl reaches puberty",
+      "typespracticed": "IV",
+      "law": "Unknown",
+      "ethnicgroups":
+        "Known to be practiced among the Conibos tribe (North East)",
+      "other":
+        "Introcision is practised. The hymen is cut and the labia and clitoris exposed and a phallic shaped object is placed in the girl's vagina.",
+      "label": "Peru",
+      "value": "peru"
+    },
+    {
+      "id": "7a727b48-fcf0-e051-3ce5-9c656ce985d6",
+      "name": "Philippines",
+      "prevalance": "Unknown",
+      "avgfgmage": "Usually cut between birth-8yrs old",
+      "typespracticed": "I and IV",
+      "law": "Unknown",
+      "ethnicgroups":
+        "Practising ethnic groups include: Tausugs, Yakan and other Muslim communities.",
+      "other":
+        "Known to be practiced in Southern Mudaneo and amoung other Muslim communities. FGM is seen as a right of passage and a religious obligation. The Yakan scrape the clitoris. The official languages are Filipino and English.",
+      "label": "Philippines",
+      "value": "philippines"
+    },
+    {
+      "id": "e20edc54-c3ce-fe7a-f25c-3f5c27b15efa",
+      "name": "Republic of Congo",
+      "prevalance": "5%",
+      "avgfgmage": "Pulling starts when the girl is 6-8yrs",
+      "typespracticed": "II",
+      "law": "Illegal",
+      "ethnicgroups": "",
+      "other":
+        "Evidence suggests FGM is practiced by some communities in the North. FGM in the form of pulling or elongation is practiced among some ethnic groups in the Republic of Congo but research is limited.",
+      "label": "Republic of Congo",
+      "value": "republic of congo"
+    },
+    {
+      "id": "2e5e7076-fe00-04a2-4a12-5b9dda266261",
+      "name": "Russia",
+      "prevalance": "Unknown",
+      "avgfgmage": "Usually before the age of 3",
+      "typespracticed": "I, II and IV",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "Among Muslim community in the Republic of Dagestan.",
+      "other":
+        "Evidence suggests FGM is practiced in the Republic of Dagestan (Russia's North Caucasus). Botlikh, Tsuntin, Bezhta plot (FGM almost universal), Tsumadinsky and Tlyaratinsky District (FGM prevalence approx 50%).",
+      "label": "Russia",
+      "value": "russia"
+    },
+    {
+      "id": "c0b8fa4f-3d78-0bce-8e93-4c947f949d33",
+      "name": "Saudi Arabia",
+      "prevalance": "Unknown",
+      "avgfgmage": "Unknown",
+      "typespracticed": "I, II and III",
+      "law": "Legal",
+      "ethnicgroups":
+        "Evidence suggests FGM is more prevelant in the Southern regions of Saudi Arabia, along the boarder where migrant populations live.",
+      "other":
+        "Evidence suggests FGM exists in Saudi Arabia however it is unclear if this is among migrant communities or Saudi women. An influential cleric is promoting FGM in Saudi Arabia.",
+      "label": "Saudi Arabia",
+      "value": "saudi arabia"
+    },
+    {
+      "id": "3b2a6dd8-3914-a54a-a462-01c752a017e3",
+      "name": "Senegal",
+      "prevalance": "26%",
+      "avgfgmage": "Predominantly on infants and young girls",
+      "typespracticed": "II and III",
+      "law": "Illegal",
+      "ethnicgroups": "Practising ethnic groups include: Soninke and Pular",
+      "other":
+        "FGM is most prevalent in the Koldam, Matam, Tambacounda and Ziguinchor regions. French is the official language.",
+      "label": "Senegal",
+      "value": "senegal"
+    },
+    {
+      "id": "51ac5ede-893b-7eb0-f682-cb1e631f1b05",
+      "name": "Sierra Leone",
+      "prevalance": "88%",
+      "avgfgmage":
+        "Anywhere between birth and puberty depending on ethnic group",
+      "typespracticed": "I and II",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Practice is prevalent among most ethnic groups in Sierra Leone, only Creole Christians are known not to practice FGM.",
+      "other":
+        "Practice is common throughout the country with higher rates in Bonthe (South). FGM is often an introduction to the Sande/Bondo society. English is the official language.",
+      "label": "Sierra Leone",
+      "value": "sierra leone"
+    },
+    {
+      "id": "26c85825-1aad-f0fe-1e5f-362f1988bc13",
+      "name": "Singapore",
+      "prevalance": "12% among Muslim women only",
+      "avgfgmage":
+        "Usually cut as new-born, in first few months but can happen later",
+      "typespracticed": "I and VI",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "",
+      "other": "Practiced amoung Malay ethnic group known as sunat perempuam.",
+      "label": "Singapore",
+      "value": "singapore"
+    },
+    {
+      "id": "7b7f4c69-52bd-cbb5-d054-a22a681229c9",
+      "name": "Somalia",
+      "prevalance": "98%",
+      "avgfgmage": "Usually between 5-8yrs old",
+      "typespracticed": "III",
+      "law": "Illegal",
+      "ethnicgroups": "",
+      "other":
+        "FGM is practiced throughout the country and is usually done to ensure marriageability. There is some evidence suggesting a decline in the Northern regions.",
+      "label": "Somalia",
+      "value": "somalia"
+    },
+    {
+      "id": "bfad2b30-7a24-73cd-6aaf-3aaf2fc050b7",
+      "name": "Sri Lanka",
+      "prevalance": "4%",
+      "avgfgmage": "Usually on newborns,40 days after birth",
+      "typespracticed": "I and IV",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "About 9% of Sri Lankan people identify as Muslim",
+      "other":
+        "Practiced amoung some Muslim and Bohra communities in Sri Lanka. Higher rates are found in Maskade, Dematagoda, Maradana and Hultsdorf. Ashes are sprinkled over the wound to stop bleeding.",
+      "label": "Sri Lanka",
+      "value": "sri lanka"
+    },
+    {
+      "id": "b3d9bb6d-8b08-0b2a-0d82-afff7f08f1de",
+      "name": "Sudan",
+      "prevalance": "88%",
+      "avgfgmage": "Usually before 12th Birthday",
+      "typespracticed": "III mainly (type II sometimes)",
+      "law": "No national law, only Illegal certain states",
+      "ethnicgroups":
+        "It is thought that FGM is present amoung all ethnic groups in Sudan",
+      "other":
+        "FGM is practiced throughout the country and women are re-infibulated after each delivery. FGM is strongly linked with marriageability. Arabic and English are the official languages.",
+      "label": "Sudan",
+      "value": "sudan"
+    },
+    {
+      "id": "3aa1fa09-b0fa-ffb0-4c61-1877810a613c",
+      "name": "Syria",
+      "prevalance": "",
+      "avgfgmage": "",
+      "typespracticed": "",
+      "law": "",
+      "ethnicgroups": "May be practiced among some Kurdish communities.",
+      "other":
+        "Syria is not known to be a practising country more recently ISIS have made a call for FGM  to be performed on all women for religious reasons however it is unclear what the effect of this has been.",
+      "label": "Syria",
+      "value": "syria"
+    },
+    {
+      "id": "6264b6d6-ed78-3083-a6e2-112ec73ac13e",
+      "name": "Tajikistan",
+      "prevalance": "",
+      "avgfgmage": "",
+      "typespracticed": "",
+      "law": "",
+      "ethnicgroups":
+        "Evidence suggests FGM is practiced here, however studies are limited.",
+      "other": "",
+      "label": "Tajikistan",
+      "value": "tajikistan"
+    },
+    {
+      "id": "52224fb0-978a-362a-c748-37f830515bdb",
+      "name": "Tanzania",
+      "prevalance": "10%",
+      "avgfgmage": "Cut before 1st birthday or after the age of 10",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Ethnic groups known to practice FGM include: Chagga, Gogo, Hadza, Kurya, Maasai and Nyaturu",
+      "other":
+        "FGM practice is highest in Mara, Arusha, Manyara (58%, highest prevalence), Dodoma and Singida (All based in the North East).",
+      "label": "Tanzania",
+      "value": "tanzania"
+    },
+    {
+      "id": "7930f9c1-821c-e772-8ec0-d685a84158d5",
+      "name": "Thailand",
+      "prevalance": "Please see other details",
+      "avgfgmage": "Usually cut as a newborn",
+      "typespracticed": "I and IV",
+      "law": "No specific FGM Law",
+      "ethnicgroups":
+        "Evidence suggests it is only practiced amoung the Muslim community who are identified as about 5% of Thailand people.",
+      "other":
+        "Evidence suggests FGM is practiced in the South of Thailand. FGM is usually performed by a medical professional who will cut to clitoris.",
+      "label": "Thailand",
+      "value": "thailand"
+    },
+    {
+      "id": "c4ab65b2-7dab-9c39-15fb-4935088c0da4",
+      "name": "The Gambia",
+      "prevalance": "76%",
+      "avgfgmage": "Usually cut under the age of 10",
+      "typespracticed": "II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups include: Mandinka, Fula/Peul, Diola, Sarahule, Serere, Aku, Marabout, Tilibonka, Lorobo, Bambara and Karonika",
+      "other":
+        "FGM is said to be increasing in The Gambia. The highest rates are found in Basse, Mansakonko, Birkama, Kanifing, Kantaur and Janjanbureh. English is the official language.",
+      "label": "The Gambia",
+      "value": "the gambia"
+    },
+    {
+      "id": "b673e05a-5f1e-8cf8-9f5a-7ca88d19ac35",
+      "name": "The Maldives",
+      "prevalance": "Please see other details",
+      "avgfgmage": "Unknown",
+      "typespracticed": "Unknown",
+      "law": "Legal",
+      "ethnicgroups": "",
+      "other":
+        "Practiced is beign revised as Islamic religious leaders are promoting it as compulsory for Muslim Women.",
+      "label": "The Maldives",
+      "value": "the maldives"
+    },
+    {
+      "id": "2b9aa6d6-f97f-ec85-12fa-da3667aed50e",
+      "name": "Togo",
+      "prevalance": "4%",
+      "avgfgmage": "Part of a coming of age ceremony, puberty age",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups": "",
+      "other":
+        "The rate of FGM has decreased vastly over the last two decades. The official language is French with Ewe and Mina spoken in the South and Kabye and Dagaomba in the North.",
+      "label": "Togo",
+      "value": "togo"
+    },
+    {
+      "id": "066ab441-98dc-7049-a787-5ef3b73bb440",
+      "name": "Turkey",
+      "prevalance": "",
+      "avgfgmage": "",
+      "typespracticed": "",
+      "law": "",
+      "ethnicgroups": "",
+      "other": "May be practiced among some Kurdish communities.",
+      "label": "Turkey",
+      "value": "turkey"
+    },
+    {
+      "id": "dd79526a-9382-56d6-b334-fa52c9b2501a",
+      "name": "UAE",
+      "prevalance": "35%",
+      "avgfgmage": "Usually in infancy",
+      "typespracticed": "I and VI",
+      "law": "Illegal in state hospitals",
+      "ethnicgroups":
+        "The evidence suggests FGM is practised among the Somali, Sudanese and Omani communities.",
+      "other":
+        "There has been no widespread studies into FGM in UAE. FGM is usually carried out due to religious belief it is obligatory.",
+      "label": "UAE",
+      "value": "uae"
+    },
+    {
+      "id": "64386ba8-ce8f-c9a3-40a2-6a6d28efecb5",
+      "name": "Uganda",
+      "prevalance": "1%",
+      "avgfgmage": "Usually between 9-15yrs",
+      "typespracticed": "I and II",
+      "law": "Illegal",
+      "ethnicgroups":
+        "Practising ethnic groups include: Sabiny, Pokot and Tepeth",
+      "other":
+        "Evidence suggests FGM is practiced in the Bukwo and Kapchorwa districts. In 2014, 5 people were jailed for aiding a procedure of FGM, however there has been lots of work from the government to educate women around FGM and the consequences.",
+      "label": "Uganda",
+      "value": "uganda"
+    },
+    {
+      "id": "9311f59d-f872-2bed-b259-36cfac5e0267",
+      "name": "Yemen",
+      "prevalance": "38%",
+      "avgfgmage": "53% between 7-10 days old, Majority cut in first month",
+      "typespracticed": "II and III",
+      "law": "Illegal in private and state hospitals",
+      "ethnicgroups": "",
+      "other":
+        "There is a large push to ban forced marriage and FGC in the country. However, FGM is promoted by influential religious leaders in the country. It is believed that FGM is for hygine reasons. FGM prevalence is higher in the Red Sea and Aden Coastal regions.",
+      "label": "Yemen",
+      "value": "yemen"
+    },
+    {
+      "id": "5cfbb9b3-739e-dae6-f7f5-4f5ad9aff11d",
+      "name": "Zambia",
+      "prevalance": "1%",
+      "avgfgmage": "Usually around puberty but can be done on infants",
+      "typespracticed": "VI",
+      "law": "Illegal",
+      "ethnicgroups": "",
+      "other":
+        "Labia elongation is a tradition in Zambia. Often herbs and oils are or weights and pegs are used to stretch the labia. Sometimes an elder will pull the girls labia and teach them how to.",
+      "label": "Zambia",
+      "value": "zambia"
+    },
+    {
+      "id": "3e5df4de-7d9e-068b-3314-da4430cb3130",
+      "name": "Zimbabwe",
+      "prevalance": "Please see other details",
+      "avgfgmage": "Taught to stretch from 7yrs",
+      "typespracticed": "III and VI",
+      "law": "No specific FGM Law",
+      "ethnicgroups": "",
+      "other":
+        "Evidence suggests that the Ramba ethnic group practice FGM and that other ethnic groups may practice labia elongation however research is limited.",
+      "label": "Zimbabwe",
+      "value": "zimbabwe"
+    }
+  ]
+}

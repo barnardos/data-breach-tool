@@ -1,0 +1,13 @@
+@import "../../custom-properties.css";
+
+/** @define ListItem; */
+
+.ListItem {
+  font: 300 var(--type-0) / 1.5rem system-ui;
+  margin-left: 0.25rem;
+  margin-top: 1rem;
+
+  &:not(:first-child) {
+    margin-top: 0;
+  }
+}

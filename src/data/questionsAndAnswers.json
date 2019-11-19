@@ -1,0 +1,61 @@
+{
+  "questionsAndAnswers": {
+    "answerMap": {
+      "na": "Not available",
+      "dontKnow": "Don't know",
+      "no": "No",
+      "yes": "Yes",
+      "empty": "Not answered"
+    },
+    "filterOptions": {
+      "id": "filterQnAOptions",
+      "choices": [
+        {
+          "id": "qna-filter-all",
+          "label": "All",
+          "value": "all"
+        },
+        {
+          "id": "qna-filter-empty",
+          "label": "Not answered",
+          "value": "empty"
+        },
+        {
+          "id": "qna-filter-yes",
+          "label": "Yes",
+          "value": "yes"
+        },
+        {
+          "id": "qna-filter-no",
+          "label": "No",
+          "value": "no"
+        },
+        {
+          "id": "qna-filter-dontKnow",
+          "label": "Don't know",
+          "value": "dontKnow"
+        },
+        {
+          "id": "qna-filter-na",
+          "label": "Not available",
+          "value": "na"
+        }
+      ],
+      "label": "Filter answers",
+      "hint": "Select which type of answers you would like to see.",
+      "name": "qna-filter",
+      "type": "SelectOneOfManyChoiceControl",
+      "required": false,
+      "validation": "",
+      "hideFromQuestionsAndAnswers": true
+    },
+    "filterMap": {
+      "all": "all",
+      "no": "no",
+      "yes": "yes",
+      "na": "na",
+      "dontKnow": "dontKnow",
+      "empty": ""
+    }
+  }
+}

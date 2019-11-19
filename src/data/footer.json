@@ -1,0 +1,39 @@
+{
+  "footer": {
+    "target": "_blank",
+    "feedback": {
+      "color": "black",
+      "href": "https://www.surveymonkey.co.uk/r/B8LS2FK",
+      "text": "Feedback",
+      "target": "_blank"
+    },
+    "privacyPolicy": {
+      "href": "https://www.barnardos.org.uk/privacy_statement.htm",
+      "text": "Privacy Policy"
+    },
+    "barnardos": {
+      "href": "http://www.barnardos.org.uk/",
+      "target": "_blank",
+      "img": {
+        "alt": "Barnardo's"
+      }
+    },
+
+    "lga": {
+      "href": "https://www.local.gov.uk/",
+      "target": "_blank",
+      "img": {
+        "alt": "Local government association"
+      }
+    },
+
+    "dfe": {
+      "href":
+        "https://www.gov.uk/government/organisations/department-for-education/",
+      "target": "_blank",
+      "img": {
+        "alt": "Funded by the Department of Education"
+      }
+    }
+  }
+}

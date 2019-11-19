@@ -1,0 +1,28 @@
+{
+  "labels": {
+    "moveAwayMessage":
+      "You will loose all the data going back. Do you want to proceed?",
+    "continue": "Continue",
+    "completeAssessment": "Complete assessment",
+    "back": "Back",
+    "download": "Download",
+    "creatingPdf": "Creating document...",
+    "idleWarningMessage":
+      "Close this message if you want to continue otherwise the form data will be deleted.",
+    "idleWarningHeader": "You have been idle for a long time."
+  },
+  "excludeReasonsFromResults": {
+    "mandatory-reporting-duty": {
+      "answersDifferentThan": ["yes"]
+    },
+
+    "immigration": {
+      "answersDifferentThan": ["yes"]
+    },
+
+    "forced-marriage": {
+      "answersDifferentThan": ["yes"]
+    }
+  },
+  "pdfFileName": "FGM_Risk_Assessment_Results"
+}

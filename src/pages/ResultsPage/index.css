@@ -1,0 +1,21 @@
+@import "../../custom-properties.css";
+
+/** @define ResultsPage; */
+
+.ResultsPage-section {
+  margin-top: 1rem;
+}
+
+.ResultsPage-outputs {
+  margin-top: 0.5rem;
+}
+
+.ResultsPage-qnAFilter {
+  margin: 0 0 2rem;
+}
+
+@media print {
+  .ResultsPage-outputs {
+    display: block;
+  }
+}

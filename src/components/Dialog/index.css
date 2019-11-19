@@ -1,0 +1,45 @@
+@import "../../custom-properties.css";
+
+/** @define Dialog; */
+/* stylelint-disable */
+.Dialog {
+  background-color: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  display: flex;
+  height: 100%;
+  left: 0;
+  overflow-y: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.Dialog--content {
+  background-color: color-mod(var(--nfgmc-red) shade(10%));
+  color: var(--white);
+  margin: auto;
+  max-width: 32rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.Dialog--close {
+  background-color: var(--white);
+  cursor: pointer;
+  height: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 2rem;
+}
+
+.Dialog--closeIcon {
+  fill: transparent;
+  stroke: var(--black);
+  stroke-linecap: round;
+  stroke-width: 5;
+}
+
+/* stylelint-enable */

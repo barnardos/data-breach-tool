@@ -1,0 +1,56 @@
+@import "../../custom-properties.css";
+
+/** @define Button; */
+
+.Button {
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  color: var(--white);
+  font: 600 var(--type-2) / 1.5rem Nova, sans-serif;
+  margin: 1rem 0 0;
+  padding: 0.75rem 3rem;
+  text-align: center;
+  white-space: normal;
+  width: 100%;
+
+  &:active {
+    box-shadow: none;
+    position: relative;
+    top: 0.25rem;
+  }
+}
+
+.Button--red {
+  background-color: var(--nfgmc-red);
+  box-shadow: 0.25rem 0.25rem color-mod(var(--nfgmc-red) shade(40%));
+
+  &:hover {
+    background-color: color-mod(var(--nfgmc-red) shade(10%));
+  }
+}
+
+.Button--orange {
+  background-color: var(--nfgmc-orange);
+  box-shadow: 0.25rem 0.25rem color-mod(var(--nfgmc-orange) shade(40%));
+
+  &:hover {
+    background-color: color-mod(var(--nfgmc-orange) shade(10%));
+  }
+}
+
+.Button--green {
+  background-color: var(--green);
+  box-shadow: 0.25rem 0.25rem color-mod(var(--green) shade(40%));
+
+  &:hover {
+    background-color: color-mod(var(--green) shade(10%));
+  }
+}
+
+@media (min-width: 32rem) {
+  .Button {
+    margin: 0 1rem 0 0;
+    width: auto;
+  }
+}

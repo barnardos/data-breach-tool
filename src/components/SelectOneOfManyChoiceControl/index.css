@@ -1,0 +1,34 @@
+@import "../../custom-properties.css";
+
+/** @define SelectOneOfManyChoiceControl; */
+
+.SelectOneOfManyChoiceControl-label {
+  display: block;
+  font: 600 var(--type-3) / 1.75rem system-ui;
+}
+
+.SelectOneOfManyChoiceControl-hint {
+  color: color-mod(var(--black) tint(30%));
+  font: 300 var(--type-0) / 1.5rem system-ui;
+}
+
+.SelectOneOfManyChoiceControl-validation {
+  margin-top: 0.5rem;
+}
+
+.SelectOneOfManyChoiceControl-validationInner {
+  color: var(--red);
+  font: 600 var(--type-0) / 1.5rem system-ui;
+}
+
+.SelectOneOfManyChoiceControl-element {
+  font: 300 var(--type-2) / 1.75rem system-ui;
+  margin-top: 0.5rem;
+  max-width: 100%;
+  padding: 0.5rem 0.75rem;
+}
+
+.SelectOneOfManyChoiceControl--invalid {
+  box-shadow: inset 0.25rem 0 0 var(--red);
+  padding-left: 1rem;
+}

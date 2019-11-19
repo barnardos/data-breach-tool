@@ -1,0 +1,7 @@
+@import "../../custom-properties.css";
+
+/** @define HeadingFour; */
+
+.HeadingFour {
+  font: 600 var(--type-5) / 3rem Nova, sans-serif;
+}

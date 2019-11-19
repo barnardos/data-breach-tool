@@ -1,0 +1,49 @@
+@import "../../custom-properties.css";
+
+/** @define Footer */
+
+.Footer {
+  box-shadow: 0 -1px 0 0 var(--nfgmc-orange);
+  margin-top: 1.5rem;
+  padding: 1rem 1rem 0;
+}
+
+.Footer-link {
+  display: inline-block;
+  font: 300 var(--type-0) / 1.5rem system-ui;
+  height: 3rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.Footer-links {
+  display: block;
+  margin: 0 1rem 0.5rem 0;
+}
+
+.Footer-logos {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0 0 0 -2rem;
+}
+
+.Footer-logo {
+  margin: 1rem 0 0 2rem;
+}
+
+.Footer-logoImage {
+  display: block;
+  height: 4rem;
+  width: auto;
+}
+
+@media (min-width: 40rem) {
+  .Footer {
+    display: flex;
+  }
+
+  .Footer-logos {
+    margin-left: auto;
+    margin-top: -1rem;
+  }
+}

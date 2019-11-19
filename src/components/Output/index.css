@@ -1,0 +1,50 @@
+@import "../../custom-properties.css";
+
+/** @define Output; */
+
+.Output {
+  background-color: color-mod(var(--black) tint(90%));
+  font: 300 var(--type-0) / 1.5rem system-ui;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.Output--danger {
+  background-color: color-mod(var(--red) tint(80%));
+}
+
+.Output--warning {
+  background-color: color-mod(var(--orange) tint(40%));
+}
+
+.Output--info {
+  background-color: color-mod(var(--black) tint(90%));
+}
+
+.Output--positive {
+  background-color: color-mod(var(--green) tint(80%));
+}
+
+@media print {
+  .Output {
+    box-shadow: inset 0 0 0 1000px color-mod(var(--black) tint(90%));
+    margin: 1rem 0;
+    page-break-inside: avoid;
+  }
+
+  .Output--danger {
+    box-shadow: inset 0 0 0 1000px color-mod(var(--red) tint(80%));
+  }
+
+  .Output--warning {
+    box-shadow: inset 0 0 0 1000px color-mod(var(--orange) tint(40%));
+  }
+
+  .Output--info {
+    box-shadow: inset 0 0 0 1000px color-mod(var(--black) tint(90%));
+  }
+
+  .Output--positive {
+    box-shadow: inset 0 0 0 1000px color-mod(var(--green) tint(80%));
+  }
+}

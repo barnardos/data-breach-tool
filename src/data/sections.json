@@ -1,0 +1,3755 @@
+{
+  "sections": [
+    {
+      "id": "report-details",
+      "title": "Case details",
+      "formFields": [
+        {
+          "id": "subjectType",
+          "choices": [
+            {
+              "id": "subjectType-unborn",
+              "label": "Unborn",
+              "value": "unborn"
+            },
+            {
+              "id": "subjectType-newborn",
+              "label": "Newborn",
+              "value": "newborn"
+            },
+            {
+              "id": "subjectType-under18",
+              "label": "Under 18",
+              "value": "under18"
+            }
+          ],
+          "legend": "Subject of assessment",
+          "name": "subjectType",
+          "type": "OneOfManyChoiceControl",
+          "required": true,
+          "hint": "",
+          "validation": "Please select the relevant subject type",
+          "additionalDescription": "",
+          "hideFromQuestionsAndAnswers": true
+        },
+        {
+          "id": "country",
+          "choices": [],
+          "label": "Country of origin",
+          "hint": "Select the country where the risk of FGM is most prominent.",
+          "name": "country",
+          "type": "SelectOneOfManyChoiceControl",
+          "externalData": true,
+          "required": true,
+          "displayOption": "Select a country",
+          "validation":
+            "Please select the country of origin related to the subject",
+          "hideFromQuestionsAndAnswers": true
+        },
+        {
+          "id": "viewsDiffer",
+          "name": "viewsDiffer",
+          "type": "OneOfManyChoiceControl",
+          "additionalDescription": "",
+          "legend":
+            "There is a concern that the parent(s)/carer(s) do not share the same view about FGM",
+          "hint":
+            "For example: The mother is pro-FGM and the father is against FGM.",
+          "choices": [
+            {
+              "id": "viewsDiffer-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "viewsDiffer-no",
+              "label": "No",
+              "value": "no"
+            }
+          ],
+          "required": true,
+          "validation":
+            "Please select if the parent(s)/carer(s) views differ around FGM",
+          "hideFromQuestionsAndAnswers": true
+        },
+        {
+          "id": "socialworker",
+          "name": "socialworker",
+          "type": "SinglelineTextControl",
+          "label": "Social worker (optional)",
+          "size": 32,
+          "hideFromQuestionsAndAnswers": true
+        },
+        {
+          "id": "casenumber",
+          "name": "casenumber",
+          "type": "SinglelineTextControl",
+          "label": "Case number (optional)",
+          "size": 32,
+          "hideFromQuestionsAndAnswers": true
+        },
+        {
+          "id": "assessmentdate",
+          "name": "assessmentdate",
+          "type": "DateControl",
+          "label": "Assessment date (optional)",
+          "hideFromQuestionsAndAnswers": true
+        }
+      ]
+    },
+    {
+      "id": "childs-developmental-needs",
+      "title": "Child’s developmental needs",
+      "formFields": [
+        {
+          "id": "heading-childs-developmental-needs-significant-risk-factors",
+          "type": "HeadingOne",
+          "heading": "Significant risk factors"
+        },
+        {
+          "id": "cdnsr1",
+          "name": "cdnsr1",
+          "legend":
+            "The girl has older female sibling(s) and/or cousin(s) who have undergone FGM.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnsr1-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnsr1-no", "label": "No", "value": "no" },
+            { "id": "cdnsr1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnsr1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "cdnsr2",
+          "name": "cdnsr2",
+          "legend":
+            "The girl is frightened of being cut and requests help from a trusted adult.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnsr2-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnsr2-no", "label": "No", "value": "no" },
+            { "id": "cdnsr2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnsr2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr4",
+          "name": "cdnsr4",
+          "legend":
+            "The girl (under 18) has confided to a regulated professional that FGM has taken place.",
+          "hint":
+            "The girl may have referred to FGM as \"cutting\" or \"circumcision\"",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnsr4-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnsr4-no", "label": "No", "value": "no" },
+            { "id": "cdnsr4-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnsr4-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr5",
+          "name": "cdnsr5",
+          "legend":
+            "The parent(s)/carer(s) believe that FGM is necessary to protect against witchcraft/evil spirits/djinns.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnsr5-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnsr5-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnsr5-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnsr5-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr5-father",
+          "name": "cdnsr5-father",
+          "legend":
+            "Father: The parent(s)/carer(s) believe that FGM is necessary to protect against witchcraft/evil spirits/djinns.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnsr5-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnsr5-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnsr5-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnsr5-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr5-mother",
+          "name": "cdnsr5-mother",
+          "legend":
+            "Mother: The parent(s)/carer(s) believe that FGM is necessary to protect against witchcraft/evil spirits/djinns.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnsr5-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnsr5-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnsr5-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnsr5-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr6",
+          "name": "cdnsr6",
+          "legend":
+            "You observe physical signs which appear to show that an act of FGM has been carried out.",
+          "hint":
+            "For clarification regarding ‘physical signs’, refer to the Mandatory Reporting of Female Genital Mutilation Procedural Information.",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnsr6-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnsr6-no", "label": "No", "value": "no" },
+            { "id": "cdnsr6-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnsr6-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr7",
+          "name": "cdnsr7",
+          "legend":
+            "Parent(s)/carer(s)/another trusted adult has enquired/stated that they want FGM performed on the girl.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnsr7-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnsr7-no", "label": "No", "value": "no" },
+            { "id": "cdnsr7-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnsr7-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr7-father",
+          "name": "cdnsr7-father",
+          "legend":
+            "Father: Parent(s)/carer(s)/another trusted adult has enquired/stated that they want FGM performed on the girl.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnsr7-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnsr7-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnsr7-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnsr7-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnsr7-mother",
+          "name": "cdnsr7-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s)/another trusted adult has enquired/stated that they want FGM performed on the girl.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnsr7-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnsr7-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnsr7-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnsr7-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "heading-childs-developmental-needs-potential-risk-factors",
+          "type": "HeadingOne",
+          "heading": "Potential risk factors"
+        },
+        {
+          "id": "cdnpr1",
+          "name": "cdnpr1",
+          "legend":
+            "Mother who has undergone FGM is pregnant/has just given birth to a female child.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpr1-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpr1-no", "label": "No", "value": "no" },
+            { "id": "cdnpr1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpr1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "cdnpr2",
+          "name": "cdnpr2",
+          "legend":
+            "There are plans for the daughter (under 18) to be married in the near or immediate future/there is a history of forced marriage or belief that FGM is required for marriage.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpr2-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpr2-no", "label": "No", "value": "no" },
+            { "id": "cdnpr2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpr2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "cdnpr3",
+          "name": "cdnpr3",
+          "legend":
+            "The girl is being taking to a country of high prevalence and one or both parent(s)/carer(s) are being evasive about why.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpr3-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpr3-no", "label": "No", "value": "no" },
+            { "id": "cdnpr3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpr3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpr7",
+          "name": "cdnpr7",
+          "legend":
+            "The girl has shared that she is to attend a special occasion/ceremony/party 'to become a woman'.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpr7-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpr7-no", "label": "No", "value": "no" },
+            { "id": "cdnpr7-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpr7-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "heading-childs-developmental-needs-complicating-factors",
+          "type": "HeadingOne",
+          "heading": "Complicating factors"
+        },
+        {
+          "id": "cdncf1",
+          "name": "cdncf1",
+          "legend": "The girl has a disability or additional needs.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdncf1-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdncf1-no", "label": "No", "value": "no" },
+            { "id": "cdncf1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdncf1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "cdncf2",
+          "name": "cdncf2",
+          "legend":
+            "The girl is an unaccompanied asylum seeking child (under 18).",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdncf2-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdncf2-no", "label": "No", "value": "no" },
+            { "id": "cdncf2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdncf2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdncf3",
+          "name": "cdncf3",
+          "legend": "The girl is frequently missing or absent from school.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdncf3-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdncf3-no", "label": "No", "value": "no" },
+            { "id": "cdncf3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdncf3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdncf4",
+          "name": "cdncf4",
+          "legend":
+            "The girl is reluctant to give consent to undergo a medical examination.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdncf4-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdncf4-no", "label": "No", "value": "no" },
+            { "id": "cdncf4-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdncf4-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "heading-childs-developmental-needs-protective-safety-factors",
+          "type": "HeadingOne",
+          "heading": "Protective/Safety factors"
+        },
+        {
+          "id": "cdnpf1",
+          "name": "cdnpf1",
+          "legend":
+            "The girl is able to identify potential risk indicators in relation to FGM.",
+          "hint":
+            "For example if the girl knows the terminology used around FGM she may be able to identify if someone is talking about it and can contact an identified safety person for support.",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpf1-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpf1-no", "label": "No", "value": "no" },
+            { "id": "cdnpf1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpf1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf2",
+          "name": "cdnpf2",
+          "legend":
+            "The girl is able to identify the health consequences of FGM.",
+          "hint":
+            "FGM is illegal in the UK. Health consequences include death, infection, shock, more information on health consequences can be found at www.nationalfgmcentre.org.uk.",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpf2-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpf2-no", "label": "No", "value": "no" },
+            { "id": "cdnpf2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpf2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf3",
+          "name": "cdnpf3",
+          "legend": "The girl has a good understanding of the law around FGM.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpf3-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpf3-no", "label": "No", "value": "no" },
+            { "id": "cdnpf3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpf3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf4",
+          "name": "cdnpf4",
+          "legend": "The girl is developing her knowledge on her human rights.",
+          "hint":
+            "Refer to Good Practice Guidance for more details on this. All children should be taught about their rights and that FGM is a violation of these rights.",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpf4-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpf4-no", "label": "No", "value": "no" },
+            { "id": "cdnpf4-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpf4-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf5",
+          "name": "cdnpf5",
+          "legend":
+            "Parent(‘s) relationship with their daughter is nurturing and stable.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpf5-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpf5-no", "label": "No", "value": "no" },
+            { "id": "cdnpf5-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpf5-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf5-father",
+          "name": "cdnpf5-father",
+          "legend":
+            "Father: Parent(‘s) relationship with their daughter is nurturing and stable.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnpf5-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnpf5-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnpf5-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnpf5-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf5-mother",
+          "name": "cdnpf5-mother",
+          "legend":
+            "Mother: Parent(‘s) relationship with their daughter is nurturing and stable.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnpf5-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnpf5-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnpf5-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnpf5-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf6",
+          "name": "cdnpf6",
+          "legend":
+            "Parent(s)/carer(s) are against performing FGM on their daughter.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "cdnpf6-yes", "label": "Yes", "value": "yes" },
+            { "id": "cdnpf6-no", "label": "No", "value": "no" },
+            { "id": "cdnpf6-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "cdnpf6-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf6-father",
+          "name": "cdnpf6-father",
+          "legend":
+            "Father: Parent(s)/carer(s) are against performing FGM on their daughter.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnpf6-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnpf6-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnpf6-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnpf6-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf6-mother",
+          "name": "cdnpf6-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) are against performing FGM on their daughter.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnpf6-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnpf6-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnpf6-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnpf6-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "cdnpf7",
+          "name": "cdnpf7",
+          "legend":
+            "The girl is aware of support services/safety networks available to her.",
+          "hint": "",
+          "tags": ["childs-developmental-needs", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "cdnpf7-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "cdnpf7-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "cdnpf7-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "cdnpf7-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "parenting-capacity",
+      "title": "Parenting capacity",
+      "formFields": [
+        {
+          "id": "heading-parenting-capacity-significant-risk-factors",
+          "type": "HeadingOne",
+          "heading": "Significant risk factors"
+        },
+        {
+          "id": "pcsr1",
+          "name": "pcsr1",
+          "legend":
+            "Parent(s)/carer(s) have limited understanding of the harm (physical and emotional) of FGM.",
+          "hint":
+            "If you select ‘yes’ you are indicating parent(s)/carer(s) do not have a good understanding/do not accept the health consequences of FGM.",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcsr1-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcsr1-no", "label": "No", "value": "no" },
+            { "id": "pcsr1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcsr1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr1-father",
+          "name": "pcsr1-father",
+          "legend":
+            "Father: Parent(s)/carer(s) have limited understanding of the harm (physical and emotional) of FGM.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr1-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr1-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr1-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr1-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr1-mother",
+          "name": "pcsr1-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) have limited understanding of the harm (physical and emotional) of FGM.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr1-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr1-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr1-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr1-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr2",
+          "name": "pcsr2",
+          "legend":
+            "Parent(s)/carer(s) have limited understanding of FGM and the law in the UK.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr2-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr2-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr2-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr2-father",
+          "name": "pcsr2-father",
+          "legend":
+            "Father: Parent(s)/carer(s) have limited understanding of FGM and the law in the UK.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr2-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr2-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr2-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr2-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr2-mother",
+          "name": "pcsr2-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) have limited understanding of FGM and the law in the UK.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr2-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr2-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr2-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr2-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr3",
+          "name": "pcsr3",
+          "legend":
+            "Parent/carer/family member are requesting re-infibulation.",
+          "hint":
+            "Re-infibulation is the re-stitching of FGM type III to reclose the vagina after childbirth.",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcsr3-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcsr3-no", "label": "No", "value": "no" },
+            { "id": "pcsr3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcsr3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "pcsr4",
+          "name": "pcsr4",
+          "legend":
+            "Parent(s)/carer(s) believe FGM is a religious requirement.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcsr4-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcsr4-no", "label": "No", "value": "no" },
+            { "id": "pcsr4-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcsr4-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr4-father",
+          "name": "pcsr4-father",
+          "legend":
+            "Father: Parent(s)/carer(s) believe FGM is a religious requirement.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr4-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr4-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr4-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr4-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr4-mother",
+          "name": "pcsr4-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) believe FGM is a religious requirement.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr4-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr4-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr4-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr4-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr5",
+          "name": "pcsr5",
+          "legend":
+            "The girl states that parent(s)/carer(s) have been verbally or physically abusive to her for talking about FGM outside the family.",
+          "hint": "This could also include the threat of witchcraft.",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcsr5-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcsr5-no", "label": "No", "value": "no" },
+            { "id": "pcsr5-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcsr5-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr6",
+          "name": "pcsr6",
+          "legend": "There are concerns around disguised compliance.",
+          "hint":
+            "The NSPCC provide this definition: 'Disguised compliance' involves a parent or carer giving the appearance of co-operating with child welfare agencies to avoid raising suspicions, to allay professional concerns and ultimately to diffuse professional intervention.",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr6-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr6-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr6-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr6-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr6-father",
+          "name": "pcsr6-father",
+          "legend": "Father: There are concerns around disguised compliance.",
+          "hint":
+            "The NSPCC provide this definition: 'Disguised compliance' involves a parent or carer giving the appearance of co-operating with child welfare agencies to avoid raising suspicions, to allay professional concerns and ultimately to diffuse professional intervention.",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr6-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr6-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr6-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr6-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr6-mother",
+          "name": "pcsr6-mother",
+          "legend": "Mother: There are concerns around disguised compliance.",
+          "hint":
+            "The NSPCC provide this definition: 'Disguised compliance' involves a parent or carer giving the appearance of co-operating with child welfare agencies to avoid raising suspicions, to allay professional concerns and ultimately to diffuse professional intervention.",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr6-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr6-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr6-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr6-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr8",
+          "name": "pcsr8",
+          "legend": "Parent(s)/carer(s) believe FGM is a cultural requirement.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcsr8-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcsr8-no", "label": "No", "value": "no" },
+            { "id": "pcsr8-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcsr8-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr8-father",
+          "name": "pcsr8-father",
+          "legend":
+            "Father: Parent(s)/carer(s) believe FGM is a cultural requirement.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr8-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr8-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr8-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr8-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcsr8-mother",
+          "name": "pcsr8-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) believe FGM is a cultural requirement.",
+          "hint": "",
+          "tags": ["parenting-capacity", "significant-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcsr8-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcsr8-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcsr8-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcsr8-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "heading-parenting-capacity-potential-risk-factors",
+          "type": "HeadingOne",
+          "heading": "Potential risk factors"
+        },
+        {
+          "id": "pcpr1",
+          "name": "pcpr1",
+          "legend":
+            "There are issues of gender inequality (including: patriarchal/matriarchal views or controlling behaviour that mean one parent/carer is powerless to protect their daughter).",
+          "hint": "",
+          "tags": ["parenting-capacity", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcpr1-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcpr1-no", "label": "No", "value": "no" },
+            { "id": "pcpr1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcpr1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "pcpr2",
+          "name": "pcpr2",
+          "legend":
+            "Parent(s)/carer(s) are avoidant and resistant to engaging with mainstream services.",
+          "hint": "",
+          "tags": ["parenting-capacity", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcpr2-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcpr2-no", "label": "No", "value": "no" },
+            { "id": "pcpr2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcpr2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpr2-father",
+          "name": "pcpr2-father",
+          "legend":
+            "Father: Parent(s)/carer(s) are avoidant and resistant to engaging with mainstream services.",
+          "hint": "",
+          "tags": ["parenting-capacity", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpr2-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpr2-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpr2-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpr2-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpr2-mother",
+          "name": "pcpr2-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) are avoidant and resistant to engaging with mainstream services.",
+          "hint": "",
+          "tags": ["parenting-capacity", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpr2-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpr2-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpr2-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpr2-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpr3",
+          "name": "pcpr3",
+          "legend":
+            "Parent(s)/carer(s) are reluctant to allow the girl to be seen by herself and insist on being present at all times.",
+          "hint":
+            "This includes parent(s)/carer(s) being reluctant for you to carry out direct work with the girl.",
+          "tags": ["parenting-capacity", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcpr3-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcpr3-no", "label": "No", "value": "no" },
+            { "id": "pcpr3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcpr3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpr3-father",
+          "name": "pcpr3-father",
+          "legend":
+            "Father: Parent(s)/carer(s) are reluctant to allow the girl to be seen by herself and insist on being present at all times.",
+          "hint":
+            "This includes parent(s)/carer(s) being reluctant for you to carry out direct work with the girl.",
+          "tags": ["parenting-capacity", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpr3-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpr3-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpr3-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpr3-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpr3-mother",
+          "name": "pcpr3-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) are reluctant to allow the girl to be seen by herself and insist on being present at all times.",
+          "hint":
+            "This includes parent(s)/carer(s) being reluctant for you to carry out direct work with the girl.",
+          "tags": ["parenting-capacity", "potential-risk-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpr3-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpr3-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpr3-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpr3-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "subjectType",
+              "questionValue": "under18",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "heading-parenting-capacity-complicating-factors",
+          "type": "HeadingOne",
+          "heading": "Complicating factors"
+        },
+        {
+          "id": "pccf1",
+          "name": "pccf1",
+          "legend":
+            "There are concerns around parental/carer(s) mental health and well-being that may impact on parenting.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pccf1-yes", "label": "Yes", "value": "yes" },
+            { "id": "pccf1-no", "label": "No", "value": "no" },
+            { "id": "pccf1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pccf1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf1-father",
+          "name": "pccf1-father",
+          "legend":
+            "Father: There are concerns around parental/carer(s) mental health and well-being that may impact on parenting.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf1-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf1-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf1-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf1-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf1-mother",
+          "name": "pccf1-mother",
+          "legend":
+            "Mother: There are concerns around parental/carer(s) mental health and well-being that may impact on parenting.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf1-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf1-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf1-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf1-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf2",
+          "name": "pccf2",
+          "legend":
+            "Parent(s)/carer(s) are isolated with little interaction with the wider community.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pccf2-yes", "label": "Yes", "value": "yes" },
+            { "id": "pccf2-no", "label": "No", "value": "no" },
+            { "id": "pccf2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pccf2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf2-father",
+          "name": "pccf2-father",
+          "legend":
+            "Father: Parent(s)/carer(s) are isolated with little interaction with the wider community.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf2-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf2-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf2-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf2-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf2-mother",
+          "name": "pccf2-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) are isolated with little interaction with the wider community.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf2-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf2-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf2-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf2-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf4",
+          "name": "pccf4",
+          "legend":
+            "Parent(s)/carer(s) English is limited and there is a language barrier.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pccf4-yes", "label": "Yes", "value": "yes" },
+            { "id": "pccf4-no", "label": "No", "value": "no" },
+            { "id": "pccf4-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pccf4-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf4-father",
+          "name": "pccf4-father",
+          "legend":
+            "Father: Parent(s)/carer(s) English is limited and there is a language barrier.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf4-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf4-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf4-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf4-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf4-mother",
+          "name": "pccf4-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) English is limited and there is a language barrier.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf4-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf4-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf4-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf4-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf5",
+          "name": "pccf5",
+          "legend":
+            "The parent(s)/carer(s) are reluctant to give consent for their daughter to undergo a medical examination.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pccf5-yes", "label": "Yes", "value": "yes" },
+            { "id": "pccf5-no", "label": "No", "value": "no" },
+            { "id": "pccf5-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pccf5-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf5-father",
+          "name": "pccf5-father",
+          "legend":
+            "Father: The parent(s)/carer(s) are reluctant to give consent for their daughter to undergo a medical examination.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf5-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf5-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf5-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf5-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pccf5-mother",
+          "name": "pccf5-mother",
+          "legend":
+            "Mother: The parent(s)/carer(s) are reluctant to give consent for their daughter to undergo a medical examination.",
+          "hint": "",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pccf5-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pccf5-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pccf5-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pccf5-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "doesNotEqual",
+              "questionId": "subjectType",
+              "questionValue": "unborn",
+              "required": true
+            },
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "heading-parenting-capacity-protective-safety-factors",
+          "type": "HeadingOne",
+          "heading": "Protective/Safety factors"
+        },
+        {
+          "id": "pcpf1",
+          "name": "pcpf1",
+          "legend":
+            "Parent(s)/carer(s) have thought about how to keep their daughter safe from risk of FGM.",
+          "hint":
+            "This could include supervised contact with high risk people, travel plans etc.",
+          "tags": ["parenting-capacity", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcpf1-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcpf1-no", "label": "No", "value": "no" },
+            { "id": "pcpf1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcpf1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpf1-father",
+          "name": "pcpf1-father",
+          "legend":
+            "Father: Parent(s)/carer(s) have thought about how to keep their daughter safe from risk of FGM.",
+          "hint":
+            "This could include supervised contact with high risk people, travel plans etc.",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpf1-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpf1-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpf1-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpf1-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpf1-mother",
+          "name": "pcpf1-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) have thought about how to keep their daughter safe from risk of FGM.",
+          "hint":
+            "This could include supervised contact with high risk people, travel plans etc.",
+          "tags": ["parenting-capacity", "complicating-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpf1-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpf1-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpf1-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpf1-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpf2",
+          "name": "pcpf2",
+          "legend":
+            "Parent(s)/carer(s) have taken active steps to protect their daughter.",
+          "hint":
+            "This could include fleeing the risk of FGM, applying for FGMPO, educating family members about FGM.",
+          "tags": ["parenting-capacity", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "pcpf2-yes", "label": "Yes", "value": "yes" },
+            { "id": "pcpf2-no", "label": "No", "value": "no" },
+            { "id": "pcpf2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "pcpf2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpf2-father",
+          "name": "pcpf2-father",
+          "legend":
+            "Father: Parent(s)/carer(s) have taken active steps to protect their daughter.",
+          "hint":
+            "This could include fleeing the risk of FGM, applying for FGMPO, educating family members about FGM.",
+          "tags": ["parenting-capacity", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpf2-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpf2-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpf2-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpf2-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "pcpf2-mother",
+          "name": "pcpf2-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) have taken active steps to protect their daughter.",
+          "hint":
+            "This could include fleeing the risk of FGM, applying for FGMPO, educating family members about FGM.",
+          "tags": ["parenting-capacity", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpf2-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpf2-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpf2-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpf2-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+
+        {
+          "id": "pcpf3",
+          "name": "pcpf3",
+          "legend":
+            "Parent(s)/carer(s) have/are developing knowledge around human rights and can apply them to FGM.",
+          "hint": "",
+          "tags": ["parenting-capacity", "protective-safety-factor"],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "pcpf3-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "pcpf3-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "pcpf3-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "pcpf3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "wider-family-and-environmental-factors",
+      "title": "Wider family and environmental factors",
+      "formFields": [
+        {
+          "id":
+            "heading-wider-family-and-environmental-factors-significant-risk-factors",
+          "type": "HeadingOne",
+          "heading": "Significant risk factors"
+        },
+        {
+          "id": "widersr2",
+          "name": "widersr2",
+          "legend": "Parent(s)/carer(s) feel powerless to say no to FGM.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "significant-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widersr2-yes", "label": "Yes", "value": "yes" },
+            { "id": "widersr2-no", "label": "No", "value": "no" },
+            { "id": "widersr2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widersr2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widersr2-father",
+          "name": "widersr2-father",
+          "legend":
+            "Father: Parent(s)/carer(s) feel powerless to say no to FGM.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "significant-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widersr2-father-yes", "label": "Yes", "value": "yes" },
+            { "id": "widersr2-father-no", "label": "No", "value": "no" },
+            {
+              "id": "widersr2-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widersr2-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widersr2-mother",
+          "name": "widersr2-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) feel powerless to say no to FGM.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "significant-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widersr2-mother-yes", "label": "Yes", "value": "yes" },
+            { "id": "widersr2-mother-no", "label": "No", "value": "no" },
+            {
+              "id": "widersr2-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widersr2-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widersr3",
+          "name": "widersr3",
+          "legend":
+            "There is a strong level of influence on the family by pro-FGM elders/relatives.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "significant-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widersr3-yes", "label": "Yes", "value": "yes" },
+            { "id": "widersr3-no", "label": "No", "value": "no" },
+            { "id": "widersr3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widersr3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "widersr4",
+          "name": "widersr4",
+          "legend": "There is a concern around flight risk.",
+          "hint":
+            "For example: You may be concerned a parent is going to take the child at short notice and go abroad to avoid statutory services.",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "significant-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "widersr4-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "widersr4-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "widersr4-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widersr4-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widersr4-father",
+          "name": "widersr4-father",
+          "legend": "Father: There is a concern around flight risk.",
+          "hint":
+            "For example: You may be concerned a father is going to take the child at short notice and go abroad to avoid statutory services.",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "significant-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "widersr4-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "widersr4-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "widersr4-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widersr4-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widersr4-mother",
+          "name": "widersr4-mother",
+          "legend": "Mother: There is a concern around flight risk.",
+          "hint":
+            "For example: You may be concerned a mother is going to take the child at short notice and go abroad to avoid statutory services.",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "significant-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "widersr4-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "widersr4-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "widersr4-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widersr4-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id":
+            "heading-wider-family-and-environmental-factors-potential-risk-factors",
+          "type": "HeadingOne",
+          "heading": "Potential risk factors"
+        },
+        {
+          "id": "widerpr1",
+          "name": "widerpr1",
+          "legend":
+            "Parent(s)/carer(s)/girl indicate that FGM is still actively practiced and expected in their community/family.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr1-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr1-no", "label": "No", "value": "no" },
+            { "id": "widerpr1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widerpr1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr1-father",
+          "name": "widerpr1-father",
+          "legend":
+            "Father: Parent(s)/carer(s)/girl indicate that FGM is still actively practiced and expected in their community/family.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr1-father-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr1-father-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpr1-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr1-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr1-mother",
+          "name": "widerpr1-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s)/girl indicate that FGM is still actively practiced and expected in their community/family.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr1-mother-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr1-mother-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpr1-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr1-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr2",
+          "name": "widerpr2",
+          "legend":
+            "Parent(s)/carer(s) or extended family members believe that not having FGM would bring dishonour on the family.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr2-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr2-no", "label": "No", "value": "no" },
+            { "id": "widerpr2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widerpr2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr2-father",
+          "name": "widerpr2-father",
+          "legend":
+            "Father: Parent(s)/carer(s) or extended family members believe that not having FGM would bring dishonour on the family.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "widerpr2-father-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "widerpr2-father-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "widerpr2-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr2-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr2-mother",
+          "name": "widerpr2-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) or extended family members believe that not having FGM would bring dishonour on the family.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "widerpr2-mother-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "widerpr2-mother-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "widerpr2-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr2-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr3",
+          "name": "widerpr3",
+          "legend":
+            "Parent(s)/carer(s) are reluctant to talk about FGM openly.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr3-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr3-no", "label": "No", "value": "no" },
+            { "id": "widerpr3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widerpr3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr3-father",
+          "name": "widerpr3-father",
+          "legend":
+            "Father: Parent(s)/carer(s) are reluctant to talk about FGM openly.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr3-father-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr3-father-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpr3-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr3-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr3-mother",
+          "name": "widerpr3-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) are reluctant to talk about FGM openly.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr3-mother-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr3-mother-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpr3-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr3-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr4",
+          "name": "widerpr4",
+          "legend":
+            "Parent(s)/carer(s) are influenced by community/faith leader who advocates for FGM.",
+          "hint": "This may be a religious leader or community group leader.",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr4-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr4-no", "label": "No", "value": "no" },
+            { "id": "widerpr4-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widerpr4-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr4-father",
+          "name": "widerpr4-father",
+          "legend":
+            "Father: Parent(s)/carer(s) are influenced by community/faith leader who advocates for FGM.",
+          "hint": "This may be a religious leader or community group leader.",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr4-father-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr4-father-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpr4-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr4-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr4-mother",
+          "name": "widerpr4-mother",
+          "legend":
+            "Mother: Parent(s)/carer(s) are influenced by community/faith leader who advocates for FGM.",
+          "hint": "This may be a religious leader or community group leader.",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpr4-mother-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpr4-mother-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpr4-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr4-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpr5",
+          "name": "widerpr5",
+          "legend":
+            "The family are claiming asylum and/or have had their asylum claim refused and, if returned to home country the girl may be at risk of FGM.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "potential-risk-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            {
+              "id": "widerpr5-yes",
+              "label": "Yes",
+              "value": "yes"
+            },
+            {
+              "id": "widerpr5-no",
+              "label": "No",
+              "value": "no"
+            },
+            {
+              "id": "widerpr5-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpr5-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id":
+            "heading-wider-family-and-environmental-factors-complicating-factors",
+          "type": "HeadingOne",
+          "heading": "Complicating factors"
+        },
+        {
+          "id": "widercf1",
+          "name": "widercf1",
+          "legend": "The Family are seeking asylum.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "complicating-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widercf1-yes", "label": "Yes", "value": "yes" },
+            { "id": "widercf1-no", "label": "No", "value": "no" },
+            { "id": "widercf1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widercf1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "widercf2",
+          "name": "widercf2",
+          "legend":
+            "The girl is within an un-registered private fostering arrangement.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "complicating-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widercf2-yes", "label": "Yes", "value": "yes" },
+            { "id": "widercf2-no", "label": "No", "value": "no" },
+            { "id": "widercf2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widercf2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id": "widercf3",
+          "name": "widercf3",
+          "legend":
+            "The girl and/or parent(s)/carer(s) have limited information translated into their own language.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "complicating-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widercf3-yes", "label": "Yes", "value": "yes" },
+            { "id": "widercf3-no", "label": "No", "value": "no" },
+            { "id": "widercf3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widercf3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ]
+        },
+        {
+          "id":
+            "heading-wider-family-and-environmental-factors-protective-safety-factors",
+          "type": "HeadingOne",
+          "heading": "Protective/Safety factors"
+        },
+        {
+          "id": "widerpf1",
+          "name": "widerpf1",
+          "legend":
+            "The parent(s)/carer(s) have supportive networks within the community who are against FGM.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf1-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf1-no", "label": "No", "value": "no" },
+            { "id": "widerpf1-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widerpf1-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf1-father",
+          "name": "widerpf1-father",
+          "legend":
+            "Father: The parent(s)/carer(s) have supportive networks within the community who are against FGM.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf1-father-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf1-father-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpf1-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpf1-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf1-mother",
+          "name": "widerpf1-mother",
+          "legend":
+            "Mother: The parent(s)/carer(s) have supportive networks within the community who are against FGM.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf1-mother-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf1-mother-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpf1-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpf1-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf2",
+          "name": "widerpf2",
+          "legend":
+            "The parent(s)/carer(s) are engaging with services and developing trust in professionals.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf2-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf2-no", "label": "No", "value": "no" },
+            { "id": "widerpf2-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widerpf2-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf2-father",
+          "name": "widerpf2-father",
+          "legend":
+            "Father: The parent(s)/carer(s) are engaging with services and developing trust in professionals.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf2-father-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf2-father-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpf2-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpf2-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf2-mother",
+          "name": "widerpf2-mother",
+          "legend":
+            "Mother: The parent(s)/carer(s) are engaging with services and developing trust in professionals.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf2-mother-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf2-mother-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpf2-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpf2-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf3",
+          "name": "widerpf3",
+          "legend":
+            "The parent(s)/carer(s) have insight into the FGM risks extended family and/or community members may pose to their daughter.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf3-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf3-no", "label": "No", "value": "no" },
+            { "id": "widerpf3-na", "label": "Not applicable", "value": "na" },
+            {
+              "id": "widerpf3-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "no",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf3-father",
+          "name": "widerpf3-father",
+          "legend":
+            "Father: The parent(s)/carer(s) have insight into the FGM risks extended family and/or community members may pose to their daughter.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf3-father-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf3-father-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpf3-father-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpf3-father-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        },
+        {
+          "id": "widerpf3-mother",
+          "name": "widerpf3-mother",
+          "legend":
+            "Mother: The parent(s)/carer(s) have insight into the FGM risks extended family and/or community members may pose to their daughter.",
+          "hint": "",
+          "tags": [
+            "wider-family-and-environmental-factors",
+            "protective-safety-factor"
+          ],
+          "type": "OneOfManyChoiceControlWithDescription",
+          "additionalDescription": "",
+          "choices": [
+            { "id": "widerpf3-mother-yes", "label": "Yes", "value": "yes" },
+            { "id": "widerpf3-mother-no", "label": "No", "value": "no" },
+            {
+              "id": "widerpf3-mother-na",
+              "label": "Not applicable",
+              "value": "na"
+            },
+            {
+              "id": "widerpf3-mother-dontKnow",
+              "label": "Don't know",
+              "value": "dontKnow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "equals",
+              "questionId": "viewsDiffer",
+              "questionValue": "yes",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

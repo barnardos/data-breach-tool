@@ -1,0 +1,14 @@
+@import "../../custom-properties.css";
+
+/** @define Title; */
+
+.Title {
+  font: 600 var(--type-8) / 3rem Nova, sans-serif;
+}
+
+@media (min-width: 40rem) {
+  .Title {
+    font-size: var(--type-9);
+    line-height: 3.5rem;
+  }
+}
