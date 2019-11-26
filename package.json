@@ -44,6 +44,7 @@
     "stylelint": "^9.3.0",
     "stylelint-config-recommended": "^2.1.0",
     "stylelint-order": "^0.8.1",
-    "stylelint-selector-bem-pattern": "^2.0.0"
+    "stylelint-selector-bem-pattern": "^2.0.0",
+    "webpack-dev-server": "^3.9.0"
   }
 }
