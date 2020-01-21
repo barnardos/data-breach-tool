@@ -2,7 +2,7 @@
 
 This project is for a risk assessment tool to be use by social workers assessing risk of female genital mutilation, and provides help and advice to social care professionals.
 
-This project aims to build a production ready FGM Assessment Tool from the [intial prototype](https://github.com/barnardos/fgm-risk-assess). This tool will take a social worker through series of questions that will then curate a set of results depending on their answers. This FGM Assessment Tool is driven by JSON files that determine the content of the tool (allowing us to easily replicate this project for other Risk Assessment Tools in the future).
+This project aims to build a production ready FGM Assessment Tool from the [initial prototype](https://github.com/barnardos/fgm-risk-assess). This tool will take a social worker through series of questions that will then curate a set of results depending on their answers. This FGM Assessment Tool is driven by JSON files that determine the content of the tool (allowing us to easily replicate this project for other Risk Assessment Tools in the future).
 
 ## Getting started
 
